@@ -1,22 +1,30 @@
 import re
 from collections import defaultdict, namedtuple, Counter
 from operator import itemgetter
-from functools import lru_cache
 from itertools import product
+import cPickle
 
 import nltk
-from nltk.corpus import brown
+from nltk.corpus import brown, cess_esp
 
-class Tagger:
-    tagset = ()
-
-    def __init__(self, tagged_corpus):
+class Tagger(object):
+    def __init__(self, tagged_corpus, tagset):
         """Initialize a tagger on the training corpus. This may take a while."""
+        self.tagset = tagset
         cfd = nltk.ConditionalFreqDist(tagged_corpus)
         self.known_tags = dict((word, freq.max()) for word, freq in cfd.items())
         my_corpus = self.tag_most_likely(word for word, _ in tagged_corpus)
         self.transforms = [t for t in self.most_common_transforms(my_corpus, tagged_corpus)
                                    if self.score_transform(t, my_corpus, tagged_corpus) > 0]
+
+    @staticmethod
+    def load(fpath):
+        with open(fpath, 'rb') as ifsock:
+            return cPickle.load(ifsock)
+
+    def save(self, fpath):
+        with open(fpath, 'wb') as ofsock:
+            cPickle.dump(self, ofsock)
 
     def tag(self, text):
         """Add part-of-speech tags to the text. The argument can be a list of words or a string. If
@@ -78,8 +86,7 @@ class Tagger:
         # return all non-empty words, with whitespace removed
         return [word.strip() for word in words if word]
 
-
-class Transform(namedtuple('Transform', ['orig', 'new', 'before'])):
+class Transform(namedtuple('BaseTransform', ['orig', 'new', 'before'])):
     def __call__(self, tagged_text):
         """Transform the text (a mutable sequence of word-tag pairs) and return the result. Note 
            that the 'before' member of the transform is checked against the transformed text, so for
@@ -106,19 +113,22 @@ def tagged_text_to_str(tagged_text):
     """Convenience function to turn a tagged text into a readable string."""
     return '  '.join('{} ({})'.format(word, tag) for word, tag in tagged_text)
 
-class BrownTagger(Tagger):
-    tagset = ('.', '(', ')', '*', '--', ',', ':', 'ABL', 'ABN', 'ABX', 'AP',
-              'AT', 'BE', 'BED', 'BEDZ', 'BEG', 'BEM', 'BEN', 'BER', 'BEZ', 'CC', 'CD',
-              'CS', 'DO', 'DOD', 'DOZ', 'DT', 'DTI', 'DTX', 'EX', 'FW', 'HV', 'HVD',
-              'HVG', 'HVN', 'IN', 'JJ', 'JJR', 'JJS', 'JJT', 'MD', 'NC', 'NN', 'NN$',
-              'NNS', 'NNS$', 'NP', 'NP$', 'NPS', 'NPS$', 'NR', 'OD', 'PN', 'PN$', 'PP$',
-              'PP$$', 'PPL', 'PPLS', 'PPO', 'PPS', 'PPSS', 'PRP', 'PRP$', 'QL', 'QLP',
-              'RB', 'RBR', 'RBT', 'RN', 'RP', 'TO', 'UH', 'VB', 'VBD', 'VBG', 'VBN',
-              'VBP', 'VBZ', 'WDT', 'WPO', 'WPS', 'WQL', 'WRB')
+BROWN_TAGS = ('.', '(', ')', '*', '--', ',', ':', 'ABL', 'ABN', 'ABX', 'AP', 'AT', 'BE', 'BED', 
+    'BEDZ', 'BEG', 'BEM', 'BEN', 'BER', 'BEZ', 'CC', 'CD', 'CS', 'DO', 'DOD', 'DOZ', 'DT', 'DTI', 
+    'DTX', 'EX', 'FW', 'HV', 'HVD', 'HVG', 'HVN', 'IN', 'JJ', 'JJR', 'JJS', 'JJT', 'MD', 'NC', 'NN',
+    'NN$', 'NNS', 'NNS$', 'NP', 'NP$', 'NPS', 'NPS$', 'NR', 'OD', 'PN', 'PN$', 'PP$', 'PP$$', 'PPL',
+    'PPLS', 'PPO', 'PPS', 'PPSS', 'PRP', 'PRP$', 'QL', 'QLP', 'RB', 'RBR', 'RBT', 'RN', 'RP', 'TO', 
+    'UH', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ', 'WDT', 'WPO', 'WPS', 'WQL', 'WRB',
+)
 
 if __name__ == '__main__':
     corpus = list(brown.tagged_words())
-    tagger = BrownTagger(corpus)
+    tagger = Tagger(corpus, BROWN_TAGS)
+    tagger.save('brown.tag')
+    '''
     print('{} total transformations'.format(len(tagger.transforms)))
     #print(tagger.transforms)
     print(tagged_text_to_str(tagger.tag('colorless green ideas sleep furiously')))
+    tags = set(tag for sent in cess_esp.tagged_sents() for word, tag in sent)
+    print(tags)
+    '''
