@@ -28,7 +28,7 @@ def getStructure(tree): #makes a list of all the rules used in the sentence
 			newRules = getStructure(child) #checks each of the children for the rules they contain
 			rules += newRules
 		else:
-			currentRule[0] += " " + child
+			currentRule[0] += " " + str(child)
 	rules += [currentRule]
 	return rules
 
