@@ -9,7 +9,7 @@ class TaggerTests(unittest.TestCase):
         corpus = [('the', 'DET'), ('horse', 'NN'), ('wants', 'VB'), ('to', 'TO'), ('race', 'VB'),
                   ('the', 'DET'), ('race', 'NN'), ('happened', 'VB'),
                   ('the', 'DET'), ('race', 'NN'), ('continued', 'VB')]
-        tagger = tbl.Tagger(corpus, ('JJ', 'DET', 'NN', 'TO', 'VB'))
+        tagger = tbl.Tagger(corpus)
         self.assertEqual(tagger.tag_word('race'), 'NN')
         self.assertEqual(tagger.tag_word('the'), 'DET')
         self.assertEqual(len(tagger.transforms), 1)

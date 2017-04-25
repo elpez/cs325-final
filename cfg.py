@@ -1,6 +1,70 @@
-"""
-- Handle tags properly
-- Generate lists instead of tuples
+"""Context-free grammars in Python.
+
+Initialize a grammar from a string
+>>> g = CFGrammar('EXPR -> EXPR OP EXPR | NUMBER')
+
+Create and access rules using indexing and slicing
+>>> g['NUMBER'] = '/[0-9]+(\.[0-9]+)?/'
+>>> g['OP'] = '+ | -'
+>>> g['EXPR']
+['EXPR', 'OP', 'EXPR']
+>>> g['OP':]
+(['+'], ['-'])
+>>> g[:'NUMBER']
+('EXPR',)
+
+Length, containment, __str__, and smallstr
+>>> len(g)
+5
+>>> 'EXPR' in g
+True
+>>> 'RABBIT' in g
+False
+>>> print(g)
+EXPR -> EXPR OP EXPR
+EXPR -> NUMBER
+NUMBER -> /[0-9]+(\.[0-9]+)?/
+OP -> +
+OP -> -
+>>> print(g.smallstr())
+EXPR -> EXPR OP EXPR | NUMBER
+NUMBER -> /[0-9]+(\.[0-9]+)?/
+OP -> + | -
+
+Renaming rules and generating a set of all symbols used in the grammar
+>>> g.rename('NUMBER', 'NUM')
+>>> print(g.smallstr())
+EXPR -> EXPR OP EXPR | NUM
+NUM -> /[0-9]+(\.[0-9]+)?/
+OP -> + | -
+>>> g.syms() == {'EXPR', 'NUM', 'OP', '+', '-'}
+True
+
+Checking and converting to Chomsky normal form
+>>> in_cnf(g)
+False
+>>> g_in_cnf = to_cnf(g)
+>>> print(g_in_cnf.smallstr())
+EXPR -> EXPR0 EXPR | /[0-9]+(\.[0-9]+)?/
+OP -> + | -
+EXPR0 -> EXPR OP
+
+Recognition and parsing (including ambiguous parses)
+>>> g.recognize('1237 - 23.4')
+True
+>>> trees = g.parse('4 - 4.5 + 2.3')
+>>> len(trees)
+2
+>>> tree_to_str(trees[0])
+'[EXPR [EXPR [EXPR [NUM 4]] [OP -] [EXPR [NUM 4.5]]] [OP +] [EXPR [NUM 2.3]]]'
+>>> tree_to_str(trees[1])
+'[EXPR [EXPR [NUM 4]] [OP -] [EXPR [EXPR [NUM 4.5]] [OP +] [EXPR [NUM 2.3]]]]'
+
+To-do
+  How to include double quotes?
+  More sensible tokenization: tokenizer should be attached to grammar, not rule
+  Support nullable grammars
+  Method to check if a grammar contains an infinite loop
 """
 import re
 import random
@@ -184,15 +248,15 @@ class CFGrammar:
         """
         return len(self.parse(sent, symbol)) > 0
 
-    def parse(self, sent, symbol=None):
+    def parse(self, sent, symbol=None, *, key=None):
         """Return a list of all possible parse trees for the given sentence. For details on the 
            parameters, see the CFGrammar.recognize method. A parse tree is a tuple of the form 
            (LABEL, CHILD0, CHILD1, ...).
         """
         if in_cnf(self):
-            return cky_parse(self, sent, symbol)
+            return cky_parse(self, sent, symbol, key=key)
         else:
-            return earley_parse(self, sent, symbol)
+            return earley_parse(self, sent, symbol, key=key)
 
     def __contains__(self, item):
         return any(rule.left == item for rule in self.rules)
@@ -357,7 +421,7 @@ def to_cnf(grammar):
 
 ### CKY PARSING
 
-def cky_parse(grammar, sent, symbol=None):
+def cky_parse(grammar, sent, symbol=None, *, key=None):
     """Parse the sentence using the CKY algorithm. For details on parameters and return values, see 
        the CFGrammar.parse method.
     """
@@ -369,7 +433,8 @@ def cky_parse(grammar, sent, symbol=None):
     n = len(words) + 1
     table = [[set() for i in range(n)] for j in range(n)]
     for col in range(1, n):
-        table[col - 1][col] = tree(grammar[:words[col-1]], words[col-1])
+        this_word = key(words[col-1]) if key is not None else words[col-1]
+        table[col - 1][col] = tree(grammar[:words[col-1]], this_word)
         for row in range(col - 2, -1, -1):
             for k in range(row + 1, col):
                 possible_rules = product(table[row][k], table[k][col])
@@ -445,7 +510,7 @@ def tree_to_str(tr):
 
 ### EARLEY PARSING
 
-def earley_parse(grammar, sent, symbol=None):
+def earley_parse(grammar, sent, symbol=None, *, key=None):
     """Parse the sentence using the Earley algorithm. For details on parameters and return values, 
        see the CFGrammar.parse method.
     """
@@ -461,7 +526,7 @@ def earley_parse(grammar, sent, symbol=None):
                 if state.next() in grammar:
                     earley_predict(chart, i, state, grammar)
                 elif i < len(words):
-                    earley_scan(chart, i, state, words)
+                    earley_scan(chart, i, state, words, key)
             else:
                 earley_complete(chart, i, state)
     ret = []
@@ -485,9 +550,10 @@ def earley_predict(chart, i, state, grammar):
             if s not in chart[i]:
                 chart[i].append(s)
 
-def earley_scan(chart, i, state, words):
+def earley_scan(chart, i, state, words, key):
     symbol = state.next()
-    if state.rule.matches(words[i], state.progress):
+    this_word = key(words[i]) if key is not None else words[i]
+    if state.rule.matches(this_word, state.progress):
         s = state.make_progress(words[i])
         if s not in chart[i+1]:
             chart[i+1].append(s)
