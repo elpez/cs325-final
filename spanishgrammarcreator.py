@@ -4,6 +4,8 @@ from nltk.corpus import cess_esp
 
 from nltk.tree import Tree
 
+from tbl import normalize_tag
+
 def MakeSpanishGrammar(filelist):
 	grammar = []
 	for fileid in filelist: 
@@ -21,14 +23,12 @@ def getStructure(tree): #makes a list of all the rules used in the sentence
 	if not isinstance(tree,Tree):
 		return []
 	rules = []
-	currentRule = [tree.label() + " ->"] #each rule is a list of a key-string and a value-list, to be put into the grammar eventually
+	currentRule = [normalize_tag(tree.label()) + " ->"] #each rule is a list of a key-string and a value-list, to be put into the grammar eventually
 	for child in tree:
 		if isinstance(child, Tree):
-			currentRule[0] += " " + child.label() #adds the child to the value-list
+			currentRule[0] += " " + normalize_tag(child.label()) #adds the child to the value-list
 			newRules = getStructure(child) #checks each of the children for the rules they contain
 			rules += newRules
-		else:
-			currentRule[0] += " " + str(child)
 	rules += [currentRule]
 	return rules
 
