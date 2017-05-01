@@ -77,7 +77,7 @@ from nltk.tree import Tree
 def default_tokenizer(s):
     return s.split() if isinstance(s, str) else list(s)
 
-class CFGrammar:
+class CFGrammar(object):
     """A class to represent context-free grammars."""
     # these are meta-tokens to parse the right hand sides of rules
     tokens = (
@@ -303,7 +303,7 @@ class CFGrammar:
                     deriv.append(sym)
             return ' '.join(deriv)
 
-class CFRule:
+class CFRule(object):
     """A class to represent context-free rules."""
 
     def __init__(self, left, right, tokenizer=default_tokenizer):
@@ -446,7 +446,7 @@ def earley_complete(chart, i, state):
             if s not in chart[i]:
                 chart[i].append(s)
 
-class EarleyState:
+class EarleyState(object):
     """A state used by the Earley algorithm."""
 
     def __init__(self, rule, progress, origin, constituents=None):
