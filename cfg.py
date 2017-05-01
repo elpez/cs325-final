@@ -46,22 +46,33 @@ True
 >>> trees = g.parse('4 - 4.5 + 2.3')
 >>> len(trees)
 2
->>> tree_to_str(trees[0])
-'[EXPR [EXPR [EXPR [NUM 4]] [OP -] [EXPR [NUM 4.5]]] [OP +] [EXPR [NUM 2.3]]]'
->>> tree_to_str(trees[1])
-'[EXPR [EXPR [NUM 4]] [OP -] [EXPR [EXPR [NUM 4.5]] [OP +] [EXPR [NUM 2.3]]]]'
+>>> print trees[0]
+(EXPR
+  (EXPR (EXPR (NUM 4)) (OP -) (EXPR (NUM 4.5)))
+  (OP +)
+  (EXPR (NUM 2.3)))
+>>> print trees[1]
+(EXPR
+  (EXPR (NUM 4))
+  (OP -)
+  (EXPR (EXPR (NUM 4.5)) (OP +) (EXPR (NUM 2.3))))
 
-To-do
-  How to include double quotes?
-  More sensible tokenization: tokenizer should be attached to grammar, not rule
-  Support nullable grammars
-  Method to check if a grammar contains an infinite loop
+Parsing with tokens
+>>> g2 = CFGrammar('S -> Det N V Adv')
+>>> sent = [('the', 'Det'), ('woman', 'N'), ('runs', 'V'), ('quickly', 'Adv')]
+>>> trees = g2.parse(sent, key=itemgetter(1))
+>>> len(trees)
+1
+>>> print trees[0] # nltk handles the part-of-speech tag formatting
+(S the/Det woman/N runs/V quickly/Adv)
 """
 import re
 import random
 from itertools import combinations_with_replacement, count, product
 from copy import copy
 from operator import itemgetter
+
+from nltk.tree import Tree
 
 def default_tokenizer(s):
     return s.split() if isinstance(s, str) else list(s)
@@ -377,13 +388,6 @@ def unique(excluding, suggestion=''):
             return name
     raise ValueError('could not find unique name')
 
-def tree_to_str(tr):
-    """Convert a tree returned by the various parse methods into a string."""
-    if isinstance(tr, tuple):
-        return '[' + ' '.join(map(tree_to_str, tr)) + ']'
-    else:
-        return str(tr)
-
 
 ### EARLEY PARSING
 
@@ -462,13 +466,13 @@ class EarleyState:
         return self.rule[self.progress]
 
     def to_tree(self):
-        ret = [self.rule.left]
+        children = []
         for c in self.constituents:
             if isinstance(c, EarleyState):
-                ret.append(c.to_tree())
+                children.append(c.to_tree())
             else:
-                ret.append(c)
-        return tuple(ret)
+                children.append(c)
+        return Tree(self.rule.left, children)
 
     def __eq__(self, other):
         return self.rule == other.rule and self.progress == other.progress \
