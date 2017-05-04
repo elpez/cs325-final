@@ -45,6 +45,9 @@ def get_label(tree_or_leaf):
 # adjectives come after nouns
 transforms = [Transform(['aq', 'n'], ['n', 'aq'])]
 
+def syntactic_transfer(tree):
+    pass
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
