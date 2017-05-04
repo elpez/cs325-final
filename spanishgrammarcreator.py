@@ -1,4 +1,5 @@
 import nltk
+from collections import Counter
 
 from nltk.corpus import cess_esp
 
@@ -7,33 +8,30 @@ from nltk.tree import Tree
 from tbl import normalize_tag
 
 def MakeSpanishGrammar(filelist):
-	grammar = []
+	grammar = Counter()
 	for fileid in filelist: 
 		for tree in cess_esp.parsed_sents(fileid): #for each sentence in the corpus
-			rules = getStructure(tree)
-			for newRule in rules: #gets the grammar rules used in that sentence and adds them to the grammar
-				if newRule not in grammar: #makes sure it doesn't double-count
-					grammar += newRule
+                        grammar += getStructure(tree)
 	target = open('spanishgrammar.py','w')
-	target.write('spanishGrammar = ' + str(grammar))
+	#target.write('spanishGrammar = ' + str(grammar))
+        target.write('\n'.join(k for k, v in grammar.items() if v > 1))
 	target.close()
 	return grammar
 
 def getStructure(tree): #makes a list of all the rules used in the sentence
 	if not isinstance(tree,Tree):
-		return []
-	rules = []
-	currentRule = [normalize_tag(tree.label()) + " ->"] #each rule is a list of a key-string and a value-list, to be put into the grammar eventually
+		return Counter()
+	rules = Counter()
+	currentRule = normalize_tag(tree.label()) + " ->" #each rule is a list of a key-string and a value-list, to be put into the grammar eventually
 	for child in tree:
 		if isinstance(child, Tree):
-			currentRule[0] += " " + normalize_tag(child.label()) #adds the child to the value-list
-			newRules = getStructure(child) #checks each of the children for the rules they contain
-			rules += newRules
-	rules += [currentRule]
+			currentRule += " " + normalize_tag(child.label()) #adds the child to the value-list
+			rules += getStructure(child)
+	rules.update([currentRule])
 	return rules
 
 def checkGrammar(grammar): #mostly for debugging
 	for key in grammar:
 		print(key)
 
-print(MakeSpanishGrammar(cess_esp.fileids()) #the grammar is very long. be careful.
+MakeSpanishGrammar(cess_esp.fileids()) #the grammar is very long. be careful.

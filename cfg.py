@@ -103,8 +103,11 @@ class CFGrammar(object):
             for line in iterable:
                 line = line.strip()
                 if line and not line.startswith('#'):
-                    lhs, _, rhs = line.split(None, 2)
-                    self[lhs] = rhs
+                    try:
+                        lhs, _, rhs = line.split(None, 2)
+                        self[lhs] = rhs
+                    except ValueError:
+                        pass
         if self.rules:
             self.start = self.rules[0].left
         else:
