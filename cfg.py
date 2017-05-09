@@ -252,7 +252,7 @@ class CFGrammar(object):
         """
         return len(self.parse(sent, symbol)) > 0
 
-    def parse(self, sent, symbol=None, key=None):
+    def parse(self, sent, symbol=None, key=itemgetter(1)):
         """Return a list of all possible parse trees for the given sentence. For details on the 
            parameters, see the CFGrammar.recognize method. A parse tree is a tuple of the form 
            (LABEL, CHILD0, CHILD1, ...).
@@ -394,7 +394,7 @@ def unique(excluding, suggestion=''):
 
 ### EARLEY PARSING
 
-def earley_parse(grammar, sent, symbol=None, key=None):
+def earley_parse(grammar, sent, symbol=None, key=itemgetter(1)):
     """Parse the sentence using the Earley algorithm. For details on parameters and return values, 
        see the CFGrammar.parse method.
     """
