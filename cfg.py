@@ -55,10 +55,11 @@ from itertools import combinations_with_replacement, count, product
 from copy import copy
 from operator import itemgetter
 
+from nltk import word_tokenize
 from nltk.tree import Tree
 
 def default_tokenizer(s):
-    return s.split() if isinstance(s, str) else list(s)
+    return word_tokenize(s) if isinstance(s, str) else list(s)
 
 class CFGrammar(object):
     """A class to represent context-free grammars."""
