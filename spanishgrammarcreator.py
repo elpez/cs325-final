@@ -22,17 +22,30 @@ def getStructure(tree): #makes a list of all the rules used in the sentence
 	if not isinstance(tree,Tree):
 		return Counter()
 	rules = Counter()
-	currentRule = normalize_tag(tree.label()) + " ->" #each rule is a list of a key-string and a value-list, to be put into the grammar
+	currentRule = normalize_clause(tree.label()) + " ->"
 	for child in tree:
 		if isinstance(child, Tree):
-			currentRule += " " + normalize_tag(child.label()) #adds the child to the value-list
+			currentRule += " " + normalize_clause(child.label()) #adds the child to the rule
 			rules += getStructure(child)
+		else:
+			currentRule = ""
 	rules.update([currentRule])
 	return rules
 
 def checkGrammar(grammar): #mostly for debugging
 	for key in grammar:
-		print(key)
+		print key
+
+def normalize_clause(tag):
+	"""Normalize a single clause tag from the cess_esp tagset.
+	"""
+	newTag = tag
+	if 'S.' in newTag:
+		newTag = 'S'
+	newTag = newTag.partition('-')[0] #removes semantic annotation from clauses
+	if 'grup.nom' in newTag:
+		newTag = newTag.partition('grup.nom')[1] #removes extra information from noun phrases
+	return newTag
 
 MakeSpanishGrammar(cess_esp.fileids()) #the grammar is very long. be careful.
 
