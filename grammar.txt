@@ -1,3 +1,13 @@
 S -> grup.nom grup.verb
-grup.nom -> d grup.nom | p | n | n | n a | n a
-grup.verb -> v grup.nom
+
+# noun phrases
+grup.nom -> d grup.nom | p | n | n | n a
+
+# verb phrases
+grup.verb -> v | v grup.nom | v grup.nom grup.nom | v grup.nom grup.prep
+
+# prepositional phrases
+grup.prep -> s grup.nom
+
+# conjunctions
+conj -> grup.nom c grup.nom | grup.verb c grup.verb
