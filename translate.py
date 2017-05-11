@@ -12,6 +12,9 @@ def translate(sentence):
     g = CFGrammar.from_file('grammar.txt')
     tags = tagger.tag(sentence)
     trees = g.parse(tags)
-    return [lexical_transfer(syntactic_transfer(tree)) for tree in trees]
+    print 'Tree: ' + str(trees)
+    transferred = [syntactic_transfer(tree) for tree in trees]
+    print 'Transferred: ' + str(transferred)
+    return [lexical_transfer(tree) for tree in transferred]
 
-print str(translate('Yo tener un perro'))
+print str(translate('Yo tener un perro rojo .'))

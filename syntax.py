@@ -9,7 +9,7 @@ Demonstration of a simple ADJ N -> N ADJ transformation
 from nltk.tree import Tree
 
 class Transform(object):
-    def __init__(self, match, change):
+    def __init__(self, change, match):
         if any(rule not in match for rule in change):
             raise ValueError('change pattern cannot add rules')
         self.match = match
@@ -21,6 +21,7 @@ class Transform(object):
             return tree
         ret = [''] * len(self.change)
         children = map(get_label, tree)
+        print 'children: ' + str(children)
         if children == self.match:
             for child in tree:
                 try:
@@ -32,7 +33,10 @@ class Transform(object):
                     pass
             return Tree(tree.label(), map(self, ret))
         else:
-            return tree
+            childTrees = []
+            for child in tree:
+                childTrees += [child]
+            return Tree(tree.label(), map(self, childTrees))
 
 def get_label(tree_or_leaf):
     """Get the label of the tree or leaf, assuming that if it is a leaf it is a (word, POS) tuple.
@@ -43,10 +47,13 @@ def get_label(tree_or_leaf):
         return tree_or_leaf[1]
 
 # adjectives come after nouns
-transforms = [Transform(['aq', 'n'], ['n', 'aq'])]
+transforms = [Transform(['aq', 'nc'], ['nc', 'aq']), Transform(['aq','np'],['np','aq']), Transform(['ao', 'nc'], ['nc', 'ao']), Transform(['ao','np'],['np','ao']), Transform(['ap', 'nc'], ['nc', 'ap']), Transform(['ap','np'],['np','ap'])]
 
 def syntactic_transfer(tree):
-    pass
+    newTree = tree
+    for transform in transforms:
+        newTree = transform(newTree)
+    return newTree
 
 if __name__ == '__main__':
     import doctest
