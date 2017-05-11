@@ -11,6 +11,7 @@ def translate(sentence):
     tagger = Tagger.load('cess.tag')
     g = CFGrammar.from_file('grammar.txt')
     tags = tagger.tag(sentence)
+    print "Tags: " + str(tags)
     trees = g.parse(tags)
     print 'Tree: ' + str(trees)
     transferred = [syntactic_transfer(tree) for tree in trees]

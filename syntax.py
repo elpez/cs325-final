@@ -9,7 +9,7 @@ Demonstration of a simple ADJ N -> N ADJ transformation
 from nltk.tree import Tree
 
 class Transform(object):
-    def __init__(self, change, match):
+    def __init__(self, match, change):
         if any(rule not in match for rule in change):
             raise ValueError('change pattern cannot add rules')
         self.match = match
@@ -47,7 +47,7 @@ def get_label(tree_or_leaf):
         return tree_or_leaf[1]
 
 # adjectives come after nouns
-transforms = [Transform(['aq', 'nc'], ['nc', 'aq']), Transform(['aq','np'],['np','aq']), Transform(['ao', 'nc'], ['nc', 'ao']), Transform(['ao','np'],['np','ao']), Transform(['ap', 'nc'], ['nc', 'ap']), Transform(['ap','np'],['np','ap'])]
+transforms = [Transform(['n', 'a'], ['a', 'n'])]
 
 def syntactic_transfer(tree):
     newTree = tree

@@ -34,6 +34,8 @@ def getStructure(tree): #makes a list of all the rules used in the sentence
 					currentRule += " " + newTag
 		else:
 			currentRule = ""
+	if len(currentRule.split()) > 7: #removes extra-long rules, mostly created by bad trees in the corpus
+		currentRule = ""
 	rules.update([currentRule])
 	return rules
 
@@ -48,8 +50,14 @@ def normalize_clause(tag):
 	if newTag[0] == 'S':
 		newTag = 'S'
 	newTag = newTag.partition('-')[0] #removes semantic annotation from clauses
-	if '.fs' in newTag or '.ms' in newTag or '.mp' in newTag or '.fp' in newTag:
-		newTag = newTag[:-3]
+	if '.fs' in newTag:
+		newTag = newTag.partition('.fs')[0]
+	if '.fp' in newTag:
+		newTag = newTag.partition('.fp')[0]
+	if '.ms' in newTag:
+		newTag = newTag.partition('.ms')[0]
+	if '.mp' in newTag:
+		newTag = newTag.partition('.mp')[0]
 	return newTag
 
 MakeSpanishGrammar(cess_esp.fileids()) #the grammar is very long. be careful.

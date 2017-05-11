@@ -119,7 +119,7 @@ def normalize_tag(tag):
     """Normalize a single tag from the cess_esp tagset. This just chops off the semantic annotation.
     """
     newTag = tag[0] #this removes everything except the basic POS
-    if newTag[0] == "F":
+    if newTag == "F":
         newTag = "" #removes punctuation
     return newTag
 
