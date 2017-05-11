@@ -12,21 +12,26 @@ def MakeSpanishGrammar(filelist):
 	for fileid in filelist: 
 		for tree in cess_esp.parsed_sents(fileid): #for each sentence in the corpus
                         grammar += getStructure(tree)
-	target = open('spanishgrammar.py','w')
+	target = open('spanishgrammar.txt','w')
 	#target.write('spanishGrammar = ' + str(grammar))
         target.write('\n'.join(k for k, v in grammar.items() if v > 1))
 	target.close()
 	return grammar
 
 def getStructure(tree): #makes a list of all the rules used in the sentence
-	if not isinstance(tree,Tree):
+	if not isinstance(tree, Tree):
 		return Counter()
 	rules = Counter()
 	currentRule = normalize_clause(tree.label()) + " ->"
 	for child in tree:
 		if isinstance(child, Tree):
-			currentRule += " " + normalize_clause(child.label()) #adds the child to the rule
-			rules += getStructure(child)
+			if isinstance(child[0], Tree):
+				currentRule += " " + normalize_clause(child.label()) #adds the child to the rule
+				rules += getStructure(child)
+			else:
+				newTag = normalize_tag(child.label()) #normalizes POS tag if it's not a clause
+				if newTag != "":
+					currentRule += " " + newTag
 		else:
 			currentRule = ""
 	rules.update([currentRule])
@@ -40,11 +45,11 @@ def normalize_clause(tag):
 	"""Normalize a single clause tag from the cess_esp tagset.
 	"""
 	newTag = tag
-	if 'S.' in newTag:
+	if newTag[0] == 'S':
 		newTag = 'S'
 	newTag = newTag.partition('-')[0] #removes semantic annotation from clauses
-	if 'grup.nom' in newTag:
-		newTag = newTag.partition('grup.nom')[1] #removes extra information from noun phrases
+	if '.fs' in newTag or '.ms' in newTag or '.mp' in newTag or '.fp' in newTag:
+		newTag = newTag[:-3]
 	return newTag
 
 MakeSpanishGrammar(cess_esp.fileids()) #the grammar is very long. be careful.

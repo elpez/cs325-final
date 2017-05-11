@@ -42,7 +42,7 @@ class Tagger(object):
 
     def tag_most_likely(self, text):
         """Add the most likely part-of-speech tags to the text based solely on POS frequency."""
-        return [(word, self.tag_word(word)) for word in text]
+        return [(word, normalize_tag(self.tag_word(word))) for word in text]
 
     def tag_word(self, word):
         """Return the most likely POS tag for a word. If the word is not present in the tagger's 
@@ -118,8 +118,11 @@ def tagged_text_to_str(tagged_text):
 def normalize_tag(tag):
     """Normalize a single tag from the cess_esp tagset. This just chops off the semantic annotation.
     """
-    #return tag[0] #this would remove everything except the basic POS
-    return tag.partition('00')[0]
+    #newTag = tag.partition('00')[0]
+    newTag = tag[0:2] #this removes everything except the basic POS + one extra piece of information
+    if newTag[0] == "F":
+        newTag = ""
+    return newTag
 
 def percentage_correct(my_tags, correct_tags):
     return 100*(1 - (Tagger.compare_texts(my_tags, correct_tags) / len(correct_tags)))

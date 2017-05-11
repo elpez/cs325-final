@@ -12,6 +12,6 @@ def translate(sentence):
     g = CFGrammar.from_file('grammar.txt')
     tags = tagger.tag(sentence)
     trees = g.parse(tags)
-    return [tree_to_sentence(lexical_transfer(syntactic_transfer(tree))) for tree in trees]
+    return [lexical_transfer(syntactic_transfer(tree)) for tree in trees]
 
 print str(translate('Yo tener un perro'))

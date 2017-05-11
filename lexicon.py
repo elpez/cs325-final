@@ -12,5 +12,3 @@ def lexical_transfer(tree):
 		else:
 			sentence += lexical_transfer(child)
 	return sentence
-
-print lexical_transfer(Tree.fromstring("(S (NP (pp yo)) (VP (vmn tener) (NP (da un) (ncms perro))))"))
