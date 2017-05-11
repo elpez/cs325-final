@@ -119,10 +119,18 @@ def normalize_tag(tag):
     """Normalize a single tag from the cess_esp tagset. This just chops off everything after and
        including the first digit.
     """
-    for i, c in enumerate(tag):
-        if c.isdigit():
-            return tag[:i]
-    return tag
+    newTag = tag
+    isMain = False
+    for i, c in enumerate(newTag):
+	if c == 'S':
+            isMain = True
+        if c == '.' and isMain: #removes annotation from main clauses
+            newTag = newTag[:i]
+    newTag = newTag.partition('-')[0] #removes semantic annotation from clauses
+    newTag = newTag.partition('00')[0] #removes semantic annotation from POS tags
+    if 'grup.nom' in newTag:
+        newTag = newTag.partition('grup.nom')[1] #removes extra information from noun phrases
+    return newTag
 
 def percentage_correct(my_tags, correct_tags):
     return 100*(1 - (Tagger.compare_texts(my_tags, correct_tags) / len(correct_tags)))

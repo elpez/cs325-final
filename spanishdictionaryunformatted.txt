@@ -728,6 +728,7 @@ humor  ; humour  ; sense of humor  ; sense of humour	humorismo	communication
 hundred  ; one hundred  ; 100  ; c	cien ; ciento ; centenar	number
 hungry	hambriento	adjective-people
 husband  ; hubby  ; married man	esposo ; hombre ; marido	family
+I	yo	pronoun
 ice  ; water ice	hielo	material
 idea  ; thought	idea ; pensamiento ; intención ; concepción ; imagen	communication
 identify  ; place	identificar	verb
@@ -1693,6 +1694,7 @@ wrong  ; incorrect	incorrecto ; erróneo	adjective-basic
 year  ; twelvemonth  ; yr	año	time
 yellow  ; yellowish  ; xanthous	amarillo	color
 yes	sí	conversation
+you	tu	pronoun
 young  ; immature	joven	adjective-people
 your	su	pronoun
 yourself	te	pronoun

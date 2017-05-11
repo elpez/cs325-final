@@ -8,11 +8,13 @@ def make_dictionary():
 		entryList = dictLine.split('\t') #list of [English versions, Spanish versions, simplified pos]
 		englishWords = entryList[0].split(';') #list of English words
 		spanishWords = entryList[1].split(';') #list of Spanish words
+		realEnglishWords = []
 		for englishWord in englishWords:
-			englishWord = englishWord.lstrip()
+			englishWord = englishWord.strip()
+			realEnglishWords += [englishWord]
 		for spanishWord in spanishWords:
-			spanishWord = spanishWord.lstrip()
-			spanishDict[spanishWord] = englishWords #puts all the English words as possible definitions for the Spanish words
+			spanishWord = spanishWord.strip()
+			spanishDict[spanishWord] = realEnglishWords #puts all the English words as possible definitions for the Spanish words
 	dictFile = open('spanishdictionary.py','w')
 	dictFile.write('spanishDictionary = ' + str(spanishDict))
 	dictFile.close()
