@@ -1,98 +1,87 @@
 
 S -> infinitiu sn sp sadv
-S -> conj.subord morfema.verbal grup.verb sn sp
 sp -> prep sn sp
 S -> infinitiu sn snd
 grup.nom -> s.a n s.a snp
+grup.nom -> grup.nom S
 S -> sa s grup.verb sp
 grup.nom -> n sn.x
+sadv -> sp sadv
 S -> coord sn neg grup.verb sn
 sn -> v r
 S -> neg
 S -> relatiu morfema.verbal grup.verb sp sp
 S -> conj.subord sn grup.verb sadv S
-grup.nom -> n snp.x
+S -> conj.subord sn grup.verb sn S
 S -> sn sadv grup.verb
 sn -> v n
-S -> conj.subord sadv sn grup.verb sn
-sp -> sp sp.j
+S -> relatiu grup.verb sp
 sa -> sa S
-grup.nom -> s.a n sn.co
 S -> relatiu s grup.verb snd sp
 S -> gerundi sn sp
-S -> sp sn.co
 S -> sp s grup.verb sn.x
 grup.nom -> s.a n sno S
 S -> conj.subord sp sn grup.verb S
-sp -> prep sp.co
+S -> conj.subord sp s grup.verb S
 S -> S S S coord S
 grup.nom.p -> p
-S -> conj.subord sn grup.verb sa.co
 grup.verb -> v sadv infinitiu
 gerundi -> v
+s.a -> S coord S
 grup.a -> grup.a coord grup.a
-sn.co -> sn coord sn.x
-s.a -> s.a coord S
+sn -> sn sn coord sn
+S -> relatiu morf.pron grup.verb S
+S -> sp sna grup.verb sn
 S -> neg sn
-S -> conj.subord grup.verb sn.co
-S -> conj.subord sn grup.verb sa sp
 infinitiu -> v infinitiu
-grup.nom -> p sp S sn.co
+grup.nom -> grup.nom grup.nom
 S -> sn sadv grup.verb sp
-S -> sadv.j S
+S -> sn sadv grup.verb sn
 s.a -> grup.nom
 S -> s neg sn grup.verb
 sn -> v d n s n
 S -> conj.subord S sn grup.verb sn
 S -> conj.subord S sn grup.verb sa
 S -> neg sp
-grup.nom -> grup.nom S
 S -> sn sadv grup.verb sa
 S -> S s grup.verb sadv
-S -> infinitiu sp.co sp
-S -> conj.subord grup.verb sa S S
+S -> sn morf.pron grup.verb S
 grup.verb -> v v infinitiu
 S -> relatiu sp grup.verb sn sp
 snd -> grup.nom
-s.a -> neg grup.a
+S -> snp morf.pron grup.verb sp sp
 S -> sno grup.verb sp
-S -> coord sn sadv grup.verb sn
 S -> infinitiu S sn sp
 grup.nom -> n s.a sp sn.x
 espec -> d p
 espec -> d r
 S -> S sn grup.verb S
-sn.co -> sno coord sno
 S -> relatiu sn morfema.verbal grup.verb sp
 sna -> grup.nom
-S -> sn grup.verb S sp.co
-grup.nom -> n s.a sn.co
+espec -> d d
+S -> conj.subord sno sn grup.verb sp
 grup.verb -> v v
 espec -> d Z
 S -> snp sadv grup.verb S
 S -> sp s grup.verb snn
 S -> sp s grup.verb snp
 snn -> grup.nom.p
-grup.nom -> n s.a S
 S -> conj.subord S
 S -> sp sadv sn grup.verb sn
 grup.verb -> v sn infinitiu
-sa -> a sp.co
-snp.x -> grup.nom.co
-S -> snn snp
 S -> sp morfema.verbal grup.verb
-snd.x -> espec grup.nom.co
 S -> relatiu S
-S -> relatiu grup.verb sp sn.co
-S -> conj.subord sn grup.verb sn S
+S -> sa grup.verb sn
+S -> s sadv grup.verb sn
+sn -> sno sno coord sn
+grup.nom -> n snp.x
 S -> sa sp
 S -> sadv s sn grup.verb sp
 S -> relatiu grup.verb snl sp sp
-snn -> grup.nom
 S -> sn sp grup.verb sa
 S -> conj.subord sn morfema.verbal grup.verb sp
+S -> relatiu neg grup.verb sn
 S -> sadv sp S
-S -> relatiu snd grup.verb sp sp
 S -> infinitiu sn.x
 grup.nom -> n snd.x
 S -> sn sp grup.verb sp
@@ -103,22 +92,22 @@ grup.nom -> n sp s.a
 S -> participi sp sadv
 grup.nom -> W snd snd
 S -> morf.pron grup.verb sn sp
+grup.nom -> grup.nom coord snp
 S -> coord S
-sn.co -> S coord sn
 sp -> prep snp
 sp -> prep snl
 sp -> prep snn
 sp -> prep sno
 S -> relatiu neg morf.pron grup.verb sp
-S -> relatiu grup.verb sp.co
 sp -> prep snd
+S -> conj.subord sn grup.verb sa S
 sp -> prep sna
 S -> relatiu neg grup.verb sp
 S -> conj.subord sn morfema.verbal grup.verb
-grup.nom.co -> s.a grup.nom.co S
 participi -> a
 S -> sn sn grup.verb sn S
 grup.nom -> n sp s.a snp
+S -> S morfema.verbal grup.verb S
 S -> conj.subord sn morf.pron grup.verb
 S -> conj.subord s morf.pron grup.verb
 grup.verb -> s infinitiu
@@ -129,25 +118,23 @@ S -> sn morfema.verbal grup.verb sp
 S -> sn morfema.verbal grup.verb sn
 S -> sp s neg grup.verb sp
 S -> sn grup.verb sadv S
-grup.nom.co -> grup.nom coord snp
+sn -> snp snp coord snp
 S -> relatiu grup.verb sadv sn
 S -> neg infinitiu sadv sn
+S -> sp sn grup.verb sn
 S -> sn neg grup.verb sa
-sn.co -> sn.co sadv.j
 S -> S s grup.verb sn S
-grup.a.co -> grup.a coord grup.a
-grup.nom -> n sp sp snp S
-S -> conj.subord sp
+S -> infinitiu sp S
+S -> sn neg grup.verb sn
 S -> sp sn grup.verb sa
 S -> s grup.verb sn.x
 sn -> espec grup.nom
 S -> sp sn grup.verb sadv sn
 S -> conj.subord sn
 S -> conj.subord sa
-grup.nom -> n s.a sp sp snp
 S -> sp sn grup.verb sp
 S -> sp sn sadv grup.verb S
-S -> s sn grup.verb
+grup.nom -> sadv n S
 S -> sadv grup.verb sn S
 S -> grup.verb sn.x
 S -> gerundi sadv sn
@@ -156,7 +143,6 @@ s.a -> s.a s.a s.a s.a
 S -> snn grup.verb sn sp
 sn -> sp.j sn
 participi -> v
-S -> sno grup.verb sp sp sp
 S -> sp sn grup.verb snn
 S -> conj.subord sn s grup.verb sp
 S -> snl grup.verb sp
@@ -166,22 +152,21 @@ S -> sp sn grup.verb snp
 S -> conj.subord snp sn grup.verb
 S -> sp sn.x grup.verb sn
 S -> sp s sn grup.verb S
-sn.co -> snp coord snp
 S -> sn sn grup.verb snp
+S -> sadv sno grup.verb sadv sp
 grup.nom -> sn n
 S -> s grup.verb sadv S
 grup.nom -> n s.a sadv
 S -> relatiu sp grup.verb sp sp
-S -> infinitiu sn.co S
 S -> relatiu sadv grup.verb sn.x sp
 S -> conj.subord s morf.pron grup.verb sn
 S -> sn grup.verb sadv S S
 S -> relatiu
+S -> coord sp morf.pron grup.verb sn
+S -> sn morf.pron grup.verb sn
 sn -> sn sp.j
 S -> sn morf.pron grup.verb sadv sp
-grup.nom -> sn n S
 S -> s neg grup.verb sp
-grup.a.co -> grup.a.co sp.j
 S -> s neg grup.verb sa
 S -> s neg grup.verb sn
 S -> neg infinitiu
@@ -191,37 +176,35 @@ S -> sn.x grup.verb sp S
 S -> relatiu.1n s grup.verb sp.1c
 S -> sn sn grup.verb sn
 S -> sn sn grup.verb sa
-sa.co -> sa coord sa
 S -> neg grup.verb sn sn
 S -> sn S
 sn -> grup.nom
-S -> conj.subord sna grup.verb sn
-grup.nom -> n sp sp sp.co
-sa.co -> sa coord sp
+S -> sn sn grup.verb sp
 S -> sn sadv S
 S -> infinitiu sn sn
-snd.j -> grup.nom
+S -> relatiu grup.verb sp sp sp
 S -> participi sp S
 S -> conj.subord sna
 S -> sp neg grup.verb sn S
 S -> conj.subord sno
 S -> conj.subord snl
-grup.nom.co -> grup.nom coord grup.nom
-sp.j -> prep sadv
+S -> conj.subord snp
+grup.nom -> s.a n s.a sp S
 S -> snp sadv grup.verb sn sp
+sadv -> sadv S
+sn -> sn sn sn coord sn
 S -> relatiu grup.verb sa snp
 S -> relatiu grup.verb sn sadv
-S -> sn neg grup.verb sn.co
-sn -> sn sn.j
+S -> conj.subord sp.1c s grup.verb sn
 S -> conj.subord s grup.verb S
 S -> sn grup.verb sadv
+S -> sno grup.verb sp sn sp
 S -> relatiu sno grup.verb sp S
-S -> relatiu morf.pron grup.verb S
+s.a -> s.a coord S
+sadv.x.j -> grup.adv
 grup.nom -> n sna S
-S -> sna grup.verb sp S
 S -> sadv grup.verb sno
-grup.a -> n s.a
-sp.co -> sp coord sp coord sp
+grup.nom -> neg.j grup.nom
 S -> relatiu sn grup.verb sadv
 S -> s morf.pron grup.verb S
 S -> snp grup.verb S
@@ -229,94 +212,85 @@ grup.nom -> n s.a sp sp
 grup.nom -> n snp S
 grup.nom -> W sn
 coord -> r
-S -> sn morf.pron grup.verb sp.co
 sn -> snp sp.j
 S -> sadv grup.verb S sn
-S -> sn.co grup.verb S
 S -> relatiu S S coord S
+S -> relatiu sna grup.verb sp
 grup.nom -> W sp
 S -> sn neg grup.verb sadv sp
 grup.nom -> n sp S S
-grup.nom -> n sna sp
-S -> s grup.verb sp sp.co
 S -> snn grup.verb S
 S -> conj.subord S sn grup.verb sp
 sn.j -> grup.nom.p
 S -> sn neg grup.verb sadv sn
 S -> sp grup.verb sn S
-S -> conj.subord sn.co grup.verb sp
+snl.j -> grup.nom
 S -> infinitiu sp sp sp
-S -> participi snd sp
 sp.1c -> prep snn
 sp.1c -> prep snl
 grup.verb -> v c infinitiu
 S -> relatiu grup.verb sadv S
 S -> infinitiu sp sp sn
 S -> sno morf.pron grup.verb sadv sp
-S -> conj.subord sn.co grup.verb sn
-S -> sn sadv grup.verb sn
+S -> sadv.j S
 S -> conj.subord sn morf.pron grup.verb sa
 espec -> espec coord espec
 S -> conj.subord grup.verb sa sn
 grup.nom.p.1n -> Z
-S -> sn grup.verb sadv sp.co
-S -> relatiu grup.verb sn sp.co
-S -> conj.subord snl grup.verb sp
 s.a -> a s.a
 S -> conj.subord sn morf.pron grup.verb sn
-sn.co -> sn coord sn coord sn
 s.a -> s.a sadv
-sn.x -> espec grup.nom.co
+S -> sn morfema.verbal grup.verb sp sp
 sn.1c -> espec grup.nom
 S -> morfema.verbal grup.verb sp
-sn.co -> sn.co coord sn
+S -> conj.subord sn grup.verb sp sp
 grup.verb -> v neg infinitiu
+S -> sno morf.pron grup.verb sp
 S -> s neg grup.verb sp S
 S -> morfema.verbal grup.verb sn
 grup.nom.p -> p sp
-grup.nom.co -> grup.nom.co s.a
 S -> relatiu grup.verb sp sn.x
 S -> sn sn grup.verb
 S -> s sn grup.verb sn sp
 S -> sadv s morfema.verbal grup.verb sp
 S -> coord grup.verb sn
+S -> sadv grup.verb sn sp sp
+S -> s grup.verb sp
+sa.x -> grup.a
 S -> relatiu sp grup.verb S
-S -> sadv grup.verb S
-S -> conj.subord sn morf.pron grup.verb sp
+grup.nom -> n sp snp S
+S -> relatiu sn grup.verb sp
 S -> relatiu s grup.verb sp
-sn.co -> snp coord sn.x
+S -> s grup.verb sadv
 S -> relatiu s grup.verb sn
 S -> sno grup.verb sn sp sp
 grup.nom -> n s.a sp S
 S -> sna grup.verb sadv sp
 S -> sadv grup.verb s
 S -> conj.subord sno grup.verb sn.x
-S -> sn.co grup.verb sn sp
+grup.nom -> grup.nom sp
 S -> sadv morf.pron grup.verb sn sp
 S -> sadv
 S -> conj.subord S coord S
 S -> sn grup.verb sa S
-grup.nom -> sadv n s.a sp
+grup.nom -> grup.nom sn
 grup.nom -> n sp snn sp
-S -> sn grup.verb sadv sp sp
-S -> infinitiu sn sp.co
+grup.nom -> s.a snp
 grup.nom -> s.a n snp
 grup.nom -> s.a n sno
 sno -> grup.nom
+sn -> sn coord snp
 sn -> v r s Z n
-S -> snp grup.verb sadv sp.co S
 grup.nom -> Z sp sp
 grup.nom -> s.a n sna
 S -> conj.subord morfema.verbal grup.verb sp
 grup.nom -> n s.a sno S
-S -> sadv grup.verb sn sadv
 grup.verb -> v prep infinitiu
+sn -> coord snp coord snp
 S -> s sn grup.verb sp
 S -> s sn grup.verb sn
 S -> conj.subord sno grup.verb sp S
-sp -> prep sn.co
-S -> conj.subord morfema.verbal grup.verb sn
-s.a -> grup.a.co
+S -> s sn grup.verb sa
 S -> S sno
 S -> sn sadv
 S -> S sna
@@ -325,57 +299,55 @@ sn -> snn S
 S -> S coord S coord S
 S -> sp s morf.pron grup.verb sp
 grup.nom -> p sp snp
-grup.nom -> n sp sp.co
 S -> sp s grup.verb sp sn
+S -> snn sp
 S -> snn sn
 S -> relatiu sn grup.verb
 S -> sp s grup.verb sp sp
-S -> relatiu grup.verb sn.co
 snp -> snp snn.j snl.j
-sp -> prep sadv
+S -> sp sn grup.verb sa sp
+sn -> sn coord sp
+s.a -> sadv a sp
 S -> conj.subord sn grup.verb sn.x
-grup.nom.co -> grup.nom.co sn.x.j
-grup.nom.co -> grup.nom coord grup.nom.co
+s.a -> sadv a sn
+sn -> sn coord sn
 sn -> sn.j sn
-S -> sn.co grup.verb sp sp sp
 S -> conj.subord grup.verb sadv sn
 S -> sn morf.pron grup.verb
 s.a -> s.a S coord S
-sa.co -> sa.co S
-sn.co -> sn sn coord S
 S -> snp grup.verb sp sp S
 sn -> sn snd.j
 S -> relatiu sadv s grup.verb sp
+grup.nom -> n s.a S S
+S -> sp morfema.verbal grup.verb sp
+sadv.j -> r
 S -> sno grup.verb sna
-grup.nom.co -> s.a grup.nom.co
 S -> grup.verb sn
 S -> S snp sn grup.verb sp
 espec -> r d d
+sn -> sn coord sn.x
 S -> infinitiu sp sn.x
 S -> s sadv grup.verb
 grup.adv -> r sadv
-grup.nom -> p sp sadv
 grup.nom -> p sp sp
 S -> S s morf.pron grup.verb
+grup.nom -> s.a n s.a sp sn
 S -> sp sn sp
 grup.nom -> s.a n s.a sp sp
 S -> coord sadv grup.verb sn
 S -> grup.verb S sn
-sn.co -> coord sno coord sn
+S -> conj.subord snp sn grup.verb sp
 grup.nom -> a S
 espec -> r s Z
 grup.nom -> n sp s.a S
 S -> snp grup.verb sadv S
-S -> snp snn s.a
+S -> conj.subord sp sno grup.verb sn
 sn -> snp sn.x.j
 S -> interjeccio
 sn -> sn sadv
 espec -> d r s Z
-espec -> d d
+grup.nom -> grup.nom.p coord grup.nom.p
 S -> conj.subord grup.verb sp sno
-sp.j -> prep sn.co
-S -> conj.subord sno sn grup.verb sp
-S -> sp sn grup.verb S S
 grup.nom.1n -> n
 sn -> sn S
 grup.nom -> n snp snp
@@ -384,94 +356,81 @@ grup.nom -> n sno sp
 grup.nom -> n snn sp
 S -> morfema.verbal grup.verb sn S
 sn -> sn snp.j
+S -> sadv sp sp
 S -> conj.subord sp sn grup.verb sn
 grup.nom -> n sno sn
 S -> conj.subord sp sn grup.verb sa
-INC -> sp
-S -> infinitiu sa.x
-S -> sp s grup.verb S
-sa -> grup.a
 S -> s grup.verb sadv sn S
 S -> grup.verb snp sp
-S -> snp morf.pron grup.verb sp sp
-grup.nom -> n s.a sp.co
+s.a -> neg grup.a
 s.a -> s.a coord sp
 S -> conj.subord sp.j S
 snp -> snp sn.x.j
 S -> relatiu sn sn grup.verb
 grup.nom -> n s.a s.a sp
-S -> relatiu morfema.verbal grup.verb sp.co
+S -> relatiu sadv grup.verb sn sp
 S -> snp morf.pron grup.verb sp
-S -> conj.subord sn grup.verb sp S
-sn.co -> sno sno sno coord sno
 S -> conj.subord snp grup.verb
 S -> S s sn grup.verb sp
-sn.co -> sadv sn.co
 S -> snp morf.pron grup.verb sa
 S -> sn neg grup.verb
-S -> snp snn
 grup.nom -> n s.a s.a sn
 grup.nom -> n S s.a
 S -> s morf.pron grup.verb sn
 grup.nom -> s.a n sn.x
 S -> snp sn grup.verb S
-s.a -> a sp.co
 S -> sn s grup.verb sn
 S -> sn s grup.verb sp
+grup.nom -> n sno S
 S -> conj.subord S sn.j
 S -> relatiu sp
 S -> sp sno grup.verb sn sp
 S -> s morf.pron grup.verb sp
-S -> infinitiu sp S
 sa -> a sp
 s.a -> neg a
+sn -> sno sno sno coord sno
+S -> sna grup.verb sp S
 grup.a -> a S
-grup.nom -> n sn sp snp
+S -> infinitiu sp sp
 S -> sp snp grup.verb S
 S -> relatiu morf.pron grup.verb sp S
 S -> relatiu sn grup.verb sa
+S -> conj.subord s morf.pron grup.verb S
 S -> relatiu sn grup.verb sn
-S -> s grup.verb snn
 sp -> s S
-S -> sn sp
+S -> participi sadv sp sp
 S -> conj.subord sadv s sn grup.verb
-S -> relatiu sn grup.verb sp
-S -> sa grup.verb sn
+S -> conj.subord sn morf.pron grup.verb sp
 S -> snp grup.verb snd
 S -> sn neg grup.verb S S
-sn.co -> sn.co sn.j
 sn -> espec grup.nom sp
 S -> sp morfema.verbal grup.verb sn
 S -> sn grup.verb sadv sp
-S -> coord sp morf.pron grup.verb sn
+S -> snp neg grup.verb sn
+sn -> sn coord sna
 sn -> espec grup.nom espec
-sn -> espec grup.a
 S -> sn grup.verb sadv sn
-S -> sp morfema.verbal grup.verb sp
-sn.co -> sn coord snp
-grup.nom -> n sno S
+sn -> sn coord sno
+sn -> sn coord snl
 grup.nom -> n sna s.a
 S -> sadv s grup.verb sadv
 grup.nom -> n s.a sp
+S -> snp neg grup.verb sp
 sn -> grup.nom.s espec
 S -> conj.subord neg morfema.verbal grup.verb S
 grup.nom -> n s.a sn
-sn.co -> sn coord sna
 S -> relatiu grup.verb sp snd sp
 S -> conj.subord grup.verb sp sp sp
-sn.co -> sn coord sno
-sn.co -> sn coord snl
+sa -> grup.a
 S -> relatiu sadv grup.verb
+grup.nom -> s.a s.a n sp
 S -> sn sa
 grup.nom -> Z sp
-grup.nom -> n sp sn.co
 S -> sadv grup.verb sn.x
 S -> sn sn
-S -> participi sadv sp sp
-S -> relatiu s sn grup.verb sp
+S -> sn sp
 S -> conj.subord s sn sn grup.verb
 S -> relatiu grup.verb snp
-S -> s grup.verb sa S
 snp.j -> espec grup.nom
 S -> relatiu grup.verb snd
 S -> neg grup.verb S
@@ -480,48 +439,46 @@ S -> relatiu grup.verb sno
 S -> relatiu grup.verb snl
 grup.nom -> S sp
 sp -> prep sn
+grup.nom -> coord grup.nom coord grup.nom
 grup.nom -> n sp sp sp sp
 S -> neg infinitiu sp sp
 S -> conj.subord grup.verb snp sn
 sp -> prep sp
+S -> snd sno grup.verb sp sp
 grup.nom -> S sn
 grup.nom -> s.a s.a S
+sa -> sp coord sa
 espec -> sn r
-sa -> sadv a
 grup.nom -> s.a s.a n
 S -> conj.subord sn neg grup.verb S
 s.a -> s.a coord s.a
 S -> snp grup.verb sadv sn
 snp -> snp snn.j
-grup.nom.co -> grup.nom.co coord grup.nom
-sn.co -> sn coord S
-S -> sn morf.pron grup.verb sadv
+S -> snp grup.verb sadv sp
 grup.nom -> n s.a snp S
 S -> sp sn.x sn grup.verb sp
-S -> coord sn grup.verb sa.co
-sn.co -> snp snp snp snp snp
-S -> participi sadv sp.co
-S -> conj.subord snp grup.verb sn.co
-sn.co -> coord snp coord snp
+grup.nom -> grup.nom s.a sp.j
+S -> s sadv grup.verb sp S
 S -> S grup.verb sadv sp snp
 S -> sn grup.verb sp sadv
 S -> s sn grup.verb sp sp
 S -> S grup.verb sp snp
 grup.verb -> v sadv v
+S -> s sn grup.verb sp sn
 s.a -> sadv sadv s.a
 s.a -> sp s.a
 grup.nom -> n s.a sn.x
-S -> conj.subord S S
 sn -> espec relatiu
 s.a -> s.a s.a coord S
 sn -> grup.nom.s
-sn.co -> snd coord snd
 S -> conj.subord s grup.verb sadv
-S -> sp sn grup.verb sp sn
-S -> coord sn grup.verb sadv
+S -> s morf.pron grup.verb sadv sp
+S -> sadv grup.verb sn sp
 S -> relatiu S S
-S -> sp morfema.verbal grup.verb sp sp
+grup.nom -> grup.nom sadv.j
 S -> sp sadv morfema.verbal grup.verb sn
+S -> S grup.verb sp
+S -> snp morf.pron grup.verb sp S
 S -> relatiu grup.verb sadv snl sp
 S -> snp grup.verb
 S -> sn INC grup.verb sn
@@ -533,52 +490,46 @@ S -> conj.subord s neg morf.pron grup.verb
 S -> snp sp s.a
 S -> sp sn neg grup.verb sp
 S -> sp sno grup.verb sn
-S -> relatiu grup.verb sn sa.co
 S -> sn morfema.verbal grup.verb snd sp
 S -> relatiu neg morfema.verbal grup.verb
 S -> sn s grup.verb
-S -> s grup.verb sn sp sn
 S -> sadv s grup.verb sp S
-S -> S sp.co
+sn -> sn S coord sn
 S -> sp sno grup.verb sp
 s.a -> espec grup.a
+S -> snp sp grup.verb sp
 S -> relatiu sadv sn grup.verb sp
-S -> conj.subord sadv sn grup.verb sn.co
 S -> S sp.j
 S -> conj.subord grup.verb sa S
 S -> snp sp grup.verb sn
 S -> s neg morf.pron grup.verb sp
 S -> relatiu sadv s grup.verb S
-S -> relatiu sadv grup.verb sn.co
 grup.nom -> n s.a sna
 grup.nom -> n s.a sno
-grup.nom -> n s.a S S
 S -> relatiu grup.verb sn.x
-S -> infinitiu sn sn.co
 S -> sadv S
 grup.nom -> n s.a snp
-S -> sp sno grup.verb sp sp
 S -> sn sp sp
 S -> S sn sp
+S -> participi sp sp
 S -> conj.subord s morfema.verbal grup.verb sadv
 sp -> prep relatiu
-S -> conj.subord sadv morfema.verbal grup.verb sn.co
 s.a -> s.a s.a s.a coord s.a
+S -> coord sn grup.verb S
 S -> coord S coord S
+grup.nom -> s.a grup.nom sp.j
 interjeccio -> i
 grup.nom -> n s.a s.a S
-S -> neg infinitiu sn sp
+sa -> espec grup.a
 S -> sno sadv grup.verb S
 sn -> p
 S -> morf.pron grup.verb
-grup.nom -> n s.a
+S -> conj.subord grup.verb sp sn
 grup.nom -> n sp sn.x
 sn -> n
-S -> sadv sn.co grup.verb S
+S -> S s sn grup.verb
 S -> sadv morfema.verbal grup.verb sp
-grup.nom -> grup.nom coord grup.nom
 S -> relatiu s grup.verb
-S -> sadv S S
 S -> sn morfema.verbal grup.verb sp S
 S -> relatiu morfema.verbal grup.verb sn
 grup.nom -> s.a n s.a sp sn.x
@@ -587,90 +538,93 @@ S -> sadv sn sp grup.verb sn
 grup.nom -> Z sna sp
 S -> coord s neg sn grup.verb
 s.a -> a sadv
-grup.nom.co -> grup.nom.co sp
+S -> relatiu morfema.verbal grup.verb sa
 S -> conj.subord sn grup.verb
 grup.nom -> n INC S
 grup.nom -> S n sp sp
 S -> snd sn morf.pron grup.verb sp
 espec -> sadv d
-s.a -> s.a S coord s.a
-sa.co -> sa coord S
+S -> relatiu morfema.verbal grup.verb sp
+S -> conj.subord s neg grup.verb
 S -> sadv gerundi sp
 S -> relatiu snp morf.pron grup.verb sp
 S -> sadv sn grup.verb S
+S -> sna sn grup.verb sp
 S -> sp s morf.pron grup.verb sadv
 S -> conj.subord sn grup.verb snn sp
 S -> sn neg grup.verb sadv S
-S -> snp grup.verb sadv sp
+S -> sn morf.pron grup.verb sadv
 grup.a -> grup.a grup.a coord grup.a
-S -> sadv morfema.verbal grup.verb sn
+S -> conj.subord S s grup.verb sp
 S -> relatiu s sn grup.verb
 S -> coord s sadv grup.verb S
 S -> sn sn sp
+sp -> prep sno.x
 S -> conj.subord S sn grup.verb
-grup.nom -> p sn.co
 relatiu -> d p
 S -> conj.subord sn sn grup.verb sp
+S -> S sn.x grup.verb sn
 S -> sadv snp grup.verb S
 S -> snp
 sn -> relatiu grup.nom
 sn -> S
 S -> conj.subord s neg grup.verb S
 S -> s neg grup.verb sn S
-sn.co -> sn.co S
 S -> sp grup.verb S
 S -> snl
 S -> sno
 S -> snn
-S -> relatiu grup.verb sp sn
 S -> participi
 S -> conj.subord neg grup.verb sn
 S -> sp snl
 S -> sp grup.verb s
-S -> s grup.verb S
+sa -> sadv sa
+S -> S grup.verb snp
+S -> sadv sn grup.verb sp sp
 sn -> v d n
 S -> S grup.verb sno
 grup.nom -> s.a s.a n snp
 S -> sadv s grup.verb S
-sn.co -> sno sno coord sno
-S -> sn s sn grup.verb sp
+S -> snd sna grup.verb sn
 S -> conj.subord s grup.verb sa S
-sn -> espec sn
-S -> relatiu neg grup.verb sn
+S -> neg grup.verb
+sp -> sp sn.j
 S -> relatiu S grup.verb sa
+sa -> S sa
 S -> sadv snp grup.verb sn sp
 S -> conj.subord sadv s grup.verb sn
 S -> relatiu sadv grup.verb snp
-sn.x -> grup.nom.co
-grup.a -> grup.a S
+grup.nom -> grup.nom s.a
 S -> conj.subord neg grup.verb sn sp.1c
-grup.nom -> n sp sp snp
-S -> s neg grup.verb sp sp
+S -> relatiu sadv grup.verb sna
 S -> conj.subord sadv s grup.verb sp
-sn.co -> sn sn sn
+sn -> sn sn sn sn
 S -> relatiu sp sn grup.verb sp
 S -> conj.subord s grup.verb sn
 S -> conj.subord s grup.verb sa
-grup.verb -> v sadv c infinitiu
 S -> sn grup.verb sn sadv
 S -> sp sn sadv grup.verb sn
+sp -> prep sn.x
+S -> sadv s morf.pron grup.verb sp
 S -> conj.subord s grup.verb sp
 S -> neg participi
 S -> relatiu sp sn grup.verb sn
 S -> sadv S s grup.verb sn
 S -> conj.subord sadv grup.verb sn S
 S -> gerundi sp S
+snn -> coord snn coord snn
 grup.nom -> W s.a
 S -> sn grup.verb sp S
+grup.nom -> grup.nom grup.nom coord grup.nom
 S -> sp s grup.verb sn sadv
 s.a -> sadv.j s.a
 S -> sn morf.pron grup.verb sp S
 S -> conj.subord sn sn grup.verb S
 grup.nom -> n S sp sp
 S -> sn sadv grup.verb sn.x
-grup.nom -> sp Z
+sn -> snp coord sn.x
 S -> participi sp snd
-grup.nom.co -> grup.nom.co grup.nom.co
+S -> sn grup.verb sp
 S -> conj.subord s sadv grup.verb sn
 S -> snp grup.verb sp S S
 S -> snp sn grup.verb sp
@@ -681,11 +635,12 @@ grup.nom -> n sn S
 sp -> sp.j sp
 S -> sp s sadv grup.verb sn
 S -> sadv sp grup.verb sn
-S -> sp s sadv grup.verb sp
+S -> sn.x grup.verb sadv sp sn
+S -> conj.subord sn sadv grup.verb sn
 S -> relatiu grup.verb snl sp
 s.a -> s.a s.a
+sn -> snl snl coord snl
 S -> snp grup.verb sn sp
-S -> sn grup.verb sadv sn S
 S -> sn.x grup.verb sadv sp sp
 S -> gerundi sp sp sp
 grup.nom -> s.a n sp sno
@@ -693,65 +648,69 @@ S -> S s morf.pron grup.verb S
 S -> conj.subord s grup.verb
 S -> sp grup.verb sp sn
 S -> sn grup.verb sn.x
-sp.co -> sp sp sp
 sp -> sp sp
 sn -> espec S
 S -> sp s grup.verb sn sp
 S -> sn grup.verb snd S
 grup.nom -> s.a n sp snp
-grup.nom -> s.a n s.a sp sn.co
 S -> coord sn grup.verb sadv sn
+grup.nom -> s.a
+sn -> sp sn
 S -> interjeccio sn grup.verb sn
+sp.1c -> prep sp
 S -> snp grup.verb sp sp
 S -> s morf.pron grup.verb sp sp
 S -> snp grup.verb sp sn
 S -> relatiu morf.pron grup.verb sp sp
-INC -> sn
+grup.nom.s -> p sp
 grup.verb -> v s infinitiu
 S -> sno grup.verb S S
 S -> participi INC
-grup.verb -> v v sadv v
 S -> snp sp grup.verb sn sp
 S -> sadv sn grup.verb sadv sp
 S -> sp
 grup.a -> s.a a sp
+grup.adv -> grup.adv coord grup.adv
 S -> sn
+infinitiu -> v
 S -> sadv sn grup.verb sadv sn
 S -> coord sn grup.verb sn S
 S -> sa
 S -> sp grup.verb sa S
 S -> sp sp morfema.verbal grup.verb sn
-grup.nom -> n S sn.x
-infinitiu -> v v
-grup.nom -> n S sn
+sa -> sa sa coord sa
 S -> coord sp s grup.verb S
 S -> snp sp grup.verb S
 S -> S S S
-S -> sn morf.pron sn grup.verb sp
 S -> sadv morf.pron grup.verb sn
 grup.nom -> n sp sna S
 S -> S grup.verb s
 grup.adv -> r sn
 grup.nom -> n sno s.a
 grup.adv -> r sp
+sn -> snl coord sn
 sn -> grup.nom.p
 sn -> s.a sn
 S -> infinitiu sn sp sp sp
+S -> S grup.verb S
 S -> relatiu grup.verb sp snp
-sn.co -> S S sn coord sn
+S -> s grup.verb sa sp
 s.a -> coord s.a coord s.a
+s.a -> sadv a sp sp
 S -> coord S S
 S -> relatiu grup.verb sp snd
+S -> conj.subord grup.verb
 S -> S coord sp
-S -> infinitiu sn.co sp
-S -> sp sn grup.verb sn sn
+S -> relatiu sn grup.verb sp sn
+S -> conj.subord s grup.verb sp sn
 S -> conj.subord s grup.verb sp S
 S -> sn neg grup.verb sp sn
+sn -> sadv.j sn
 sn -> sn sadv.j
 grup.nom.p -> Z
-sn.co -> sn.co sn
+grup.nom -> p sp S sn
 grup.nom -> n S
-grup.nom -> a s.a
+S -> sn neg grup.verb sp sp
 S -> conj.subord s grup.verb sp sp
 S -> relatiu sn grup.verb sp sp
 S -> conj.subord sn grup.verb sp sn
@@ -762,83 +721,79 @@ S -> conj.subord neg
 S -> sn grup.verb snp
 grup.nom -> sadv n
 S -> relatiu grup.verb sa sp
+grup.nom -> n sp sp snp S
 S -> infinitiu S
 S -> sadv s grup.verb sn sp
-S -> sna sn grup.verb sp
-sp -> prep sn.x
+S -> s sadv grup.verb sp
 S -> relatiu sn grup.verb sn sp
 S -> sn.x grup.verb sp sp
 S -> sna neg grup.verb sn
 S -> sp sn grup.verb
 S -> sn grup.verb sp sp S
-sp -> prep snn.co
 S -> sn.x grup.verb sp sn
 grup.nom -> S W sn
-S -> s sadv grup.verb sn
-grup.nom -> Z sn snn
+S -> conj.subord morfema.verbal grup.verb sadv sp
 grup.nom -> n s.a S sp
 s.a -> grup.adv
+S -> S grup.verb snp S
 snd -> espec grup.nom
 S -> sn grup.verb sp sn S
 grup.nom -> n s.a S sn
 S -> relatiu s sadv grup.verb
 S -> sn neg grup.verb sp
 grup.nom -> s.a s.a
-S -> coord grup.verb S
+S -> sno grup.verb sadv sp sp
 S -> conj.subord s morf.pron grup.verb sp
 S -> sp sn neg grup.verb sa
 S -> gerundi sn sp sp
-sn.co -> sno coord sn
+snd.j -> grup.nom
+sn -> coord sno coord sn
+grup.nom -> n s.a sp sp snp
 S -> gerundi sadv
 S -> snn grup.verb sp
-S -> sp s grup.verb sn.co sp
+sn -> snp coord sn
 coord -> s
 S -> sp sn grup.verb S
-S -> infinitiu sp.co
 S -> conj.subord coord S coord S
 S -> snn grup.verb sn
 sn -> sp.j snp snn.j sno.j
 S -> conj.subord neg grup.verb sn sp
 coord -> c
 s.a -> sn a
+S -> s sn grup.verb
 S -> S s grup.verb S
 S -> sn morfema.verbal grup.verb sadv sp
-sn -> sn snn.j
-S -> s grup.verb sp
 sna -> espec grup.nom
 S -> s grup.verb sp S
 S -> s grup.verb sn
 snn -> grup.nom.p.1n
 S -> s grup.verb sa
-S -> sp sadv morfema.verbal grup.verb sp
-grup.nom.co -> S grup.nom.co
-sp.j -> prep S
+S -> sadv grup.verb sn sadv
+S -> infinitiu sadv sn.x
+S -> relatiu grup.verb sn sn
 S -> gerundi sadv S
 S -> coord s sn grup.verb
 grup.nom -> sadv grup.nom
 S -> infinitiu
 sp -> prep grup.nom
-S -> conj.subord sp sno grup.verb sn
-S -> infinitiu sadv sn.co
-S -> s morf.pron grup.verb sadv sp
+S -> snp snn s.a
+S -> sp sno grup.verb sadv sn
 S -> S s grup.verb sp
 S -> infinitiu sadv sn sp
+S -> conj.subord sn grup.verb sa sp
 s.a -> s.a s.a coord s.a
-S -> relatiu sadv grup.verb sn sp
 S -> S s grup.verb sn
+S -> snp snn
 S -> s grup.verb sp sadv
 S -> sn neg sn grup.verb
-snn.co -> coord snn coord snn
 S -> relatiu s sn grup.verb sn
-sp -> prep snd.co
-S -> snp neg grup.verb sn
 S -> sp.1c sno grup.verb sn
 S -> S sn grup.verb sp S
 S -> conj.subord S S coord S
+S -> relatiu s sn grup.verb sp
 sn.x -> sn.x sno.j
 S -> relatiu s sadv grup.verb sn
 S -> conj.subord s grup.verb S sp
-grup.nom -> s.a
 S -> sn neg grup.verb S
 S -> conj.subord s neg grup.verb sp
 S -> relatiu morf.pron grup.verb sp
@@ -847,9 +802,9 @@ S -> snl grup.verb S
 sp -> prep
 S -> relatiu s sadv grup.verb sp
 S -> sno morf.pron grup.verb sp sp
-sn.co -> sn coord sadv
-S -> relatiu morfema.verbal grup.verb sa
-S -> S s grup.verb
+sn.x -> espec grup.nom
+S -> snp grup.verb sn
+S -> sp sno grup.verb sp sp
 S -> sp sno grup.verb sp sn
 S -> relatiu s morf.pron grup.verb
 S -> S s grup.verb sa
@@ -858,15 +813,13 @@ S -> conj.subord sp grup.verb sn
 grup.nom -> n S S
 grup.a.1n -> a
 sn -> v d n c p
-sn -> sadv.j snd
 S -> neg infinitiu sa
 S -> coord s grup.verb
 S -> sp grup.verb sn.x
-S -> sp sn grup.verb sn.co
 S -> neg infinitiu sn
-S -> sadv sn grup.verb sp sp
-S -> sna grup.verb sn
 grup.nom -> s.a n snp S
+grup.nom -> n s.a sna S
+S -> conj.subord sadv sn grup.verb S
 S -> sna grup.verb sp
 S -> neg infinitiu sp
 sp -> sp snd.j
@@ -874,42 +827,47 @@ S -> sadv grup.verb s sn
 S -> conj.subord snp grup.verb sn S
 S -> infinitiu sn sadv sp
 S -> relatiu grup.verb sn S
+sn -> v r d n
 relatiu.1n -> p
 S -> sn grup.verb sadv S sp
 S -> conj.subord sp snp grup.verb sn
 S -> infinitiu snl sp
+grup.nom -> grup.nom sp sp
+grup.nom -> sp Z
 grup.nom -> n S sp
 S -> infinitiu sadv sp sp
 S -> sn s grup.verb S
 grup.nom -> sp S
-sn -> v r d n
-S -> sn sn grup.verb S
-S -> relatiu sn grup.verb sn.co
-grup.nom.s -> p sp
+INC -> sp
+INC -> sn
 S -> sn morfema.verbal grup.verb S
 S -> conj.subord sna grup.verb sp sp
-S -> snp sp grup.verb sp
+S -> sp sn grup.verb sadv S
+grup.nom -> n S sn
 S -> relatiu sp s grup.verb sp
 S -> coord neg
+S -> sn sadv grup.verb sp sn
 S -> sadv sn grup.verb sp
-S -> conj.subord sn grup.verb sp sp
+S -> conj.subord sp morf.pron grup.verb sn
 S -> S s sadv grup.verb sn
 S -> prep sn
 S -> sadv sn grup.verb sn
+grup.nom -> n s.a sp sp S
 S -> participi sn sp
+snn.x -> grup.nom
 S -> sn sadv grup.verb sp sp
-S -> sadv sn grup.verb sn.co
-grup.nom.co -> grup.nom.co snp.j
+sn -> sna coord sna
+sn -> sadv.j snp
 S -> sadv sn grup.verb sa
+S -> s grup.verb sadv sn
 S -> sn grup.verb sn sp
 S -> S sp sp
-S -> infinitiu sadv sn.x
+sp.j -> prep S
 S -> sp sp sn grup.verb sn
+S -> sn grup.verb sn sn
 S -> grup.verb sn sp
 S -> sp s grup.verb sa sn
 S -> snp sadv
-S -> sn grup.verb sna
-sn.co -> sn sn coord sn
 grup.nom -> n
 sp -> sp S
 S -> grup.verb sn sn
@@ -918,139 +876,121 @@ sn -> sn
 S -> s sadv grup.verb sp sp
 sp -> sadv sp
 INC -> S
-grup.nom.co -> s.a grup.nom.co sp.j
 S -> s sadv grup.verb sp sn
 S -> sadv sno grup.verb S
 grup.nom -> sadv s.a sn
 S -> snp grup.verb sadv
+S -> sp sn grup.verb sn sadv
 S -> sno grup.verb sp sn
-grup.nom -> n sp sp sn
 S -> conj.subord snp grup.verb sn
 S -> conj.subord snp grup.verb sa
 S -> relatiu sno grup.verb
 S -> sadv sn grup.verb sn S
-S -> coord sp morfema.verbal grup.verb sn
+grup.nom -> n sp snp snp
+espec -> d n s
 S -> snp.x grup.verb sp S
 grup.nom -> S n S
 S -> sadv morfema.verbal grup.verb sp sn
-sn.co -> sna coord sn
+S -> conj.subord snp grup.verb sp
 S -> conj.subord sn neg grup.verb sp
-sn.co -> snp coord sn
 S -> snp grup.verb S S
-S -> neg grup.verb sn sp
-S -> conj.subord sp s grup.verb S
-sp.co -> sp.co sp.j
+sn -> sn snp
+S -> coord sn grup.verb sadv
 espec -> r s
-S -> infinitiu sn sadv
+espec -> r r
 grup.nom -> n snl sp
-grup.nom -> n sp sno
-espec -> r d
 sadv.j -> grup.adv
 S -> relatiu sno grup.verb sp
 S -> conj.subord sn grup.verb sp
-sadv.co -> sp coord sadv
-S -> sadv sn grup.verb sn sp
 S -> conj.subord sn grup.verb sn
 S -> sp participi
 s.a -> sadv s.a
-S -> relatiu sno grup.verb sn
 S -> conj.subord sn grup.verb sa
-espec -> d a Z
+S -> conj.subord grup.verb sn.x
 S -> sadv infinitiu sp S
-sn.co -> sn.x coord sn.co
+sa -> sa sp
 S -> relatiu s neg grup.verb S
 S -> conj.subord sn neg grup.verb
+grup.nom -> grup.nom coord grup.nom.s
 sp.j -> prep sn
-sn -> sn sn
+sa -> sa sa
 S -> s neg grup.verb sadv sn
-S -> relatiu sn grup.verb sa sp
-snn.x -> grup.nom.co
+sa -> sa sn
 S -> relatiu s grup.verb sp sp
 S -> snp grup.verb sp S
-sno -> grup.nom.co
-S -> sn sp.co
 S -> infinitiu sa sn
-S -> morf.pron grup.verb sn S
 S -> infinitiu sa sp
 S -> snp neg grup.verb sn S
-S -> sn morfema.verbal grup.verb snd
-S -> conj.subord sn grup.verb sn sp
+S -> sadv grup.verb sn sn
 S -> snp grup.verb sn S
-grup.nom -> n sp INC
 S -> relatiu snp grup.verb sn
-grup.nom -> n sp snp snp
+sa -> sa coord sp
+sn -> sn coord S
+S -> coord sp morfema.verbal grup.verb sn
 snp -> n
+S -> sno grup.verb sa sp
 S -> grup.verb
-S -> morfema.verbal grup.verb sn.co
-grup.nom -> s.a n sp.co
-S -> snp grup.verb sn.co
+S -> relatiu snp grup.verb sp
 S -> infinitiu sp sp sp sp
 S -> coord sn grup.verb sna
-S -> sn morfema.verbal grup.verb
+S -> conj.subord sp
 S -> sp sn grup.verb sadv
-S -> sn grup.verb s
 grup.nom -> snp n
 S -> sno grup.verb sadv sp
-sn -> sadv sn
-grup.nom -> n sp sadv
 S -> sadv infinitiu
-S -> snp grup.verb sadv sno sp
-sno.co -> sno coord sno
-S -> conj.subord snp grup.verb sp
+S -> conj.subord s grup.verb sn sp
 S -> sno grup.verb sadv sn
-S -> relatiu sn grup.verb sp.co
-S -> conj.subord s grup.verb sn.co
 S -> s grup.verb sp S S
 S -> S morfema.verbal grup.verb sadv sp
 neg -> r
 grup.nom -> n sp snd
 S -> relatiu sp grup.verb
 snp -> snp snn.j sno.j
-S -> s neg sn grup.verb sadv
-S -> conj.subord morf.pron grup.verb sn sp
+snd.x -> grup.nom
+S -> sp grup.verb sn sp sp
+snd.x -> espec grup.nom
 S -> conj.subord sno grup.verb sp
 sn -> espec grup.nom S
 S -> S sn grup.verb sn sp
 grup.nom -> s.a n s.a S
 sadv -> sn r
-S -> conj.subord sno grup.verb sadv sn
 S -> sadv s neg grup.verb S
 S -> conj.subord sno grup.verb sa
-S -> sp morfema.verbal grup.verb sn.co
 S -> S sn grup.verb sn sn
 grup.nom -> n sp s.a sn
 sadv -> espec grup.adv
+sn -> sadv snn
 S -> conj.subord sno grup.verb sn
 S -> snp morf.pron grup.verb sn
 S -> conj.subord sn grup.verb sp sadv
 S -> s sn grup.verb sadv S
+S -> s grup.verb S sn
+grup.a -> S coord grup.a
 S -> s grup.verb S sp
 grup.nom -> s.a n sp S
 grup.a -> sp
-S -> S sn grup.verb sp sp
+espec -> r s d
 S -> s grup.verb
-S -> sn grup.verb sa sp
-espec -> r r
 S -> sadv s grup.verb
 S -> infinitiu sp sp S
 S -> s sn grup.verb sadv sp
-sp.co -> sp sp coord sp
+S -> S sn grup.verb sn S
 S -> conj.subord sp s grup.verb sa
 S -> snn snp sp
-S -> conj.subord sp s grup.verb sn
-S -> relatiu s sadv neg grup.verb
-sn.co -> snp snp coord snp
+S -> sna snl
+sn -> sn sn.j
 S -> relatiu grup.verb sn sp S
 S -> conj.subord sp s grup.verb sp
 S -> conj.subord s sadv grup.verb S
+S -> conj.subord sn grup.verb sn sp
 S -> gerundi S
 S -> sp morfema.verbal grup.verb sn sp
 sn -> espec grup.nom.s
-sn.co -> snn coord sn
 S -> sp morfema.verbal grup.verb S
-grup.nom -> n sp.co S
 grup.nom -> n sp s.a sp
 S -> conj.subord sn grup.verb sn sn
+sn -> sno coord sno
+espec -> r d
 S -> sn grup.verb sn sp S
 S -> sn sno grup.verb sn
 grup.nom -> n s.a s.a s.a
@@ -1062,135 +1002,131 @@ sn -> grup.nom espec
 grup.a -> grup.a grup.a
 S -> relatiu grup.verb S sp
 S -> sno grup.verb sadv S
-espec -> r Z
+sp -> coord sp coord s.a
 S -> relatiu neg grup.verb sn sp
 S -> conj.subord sadv sn
+grup.nom -> grup.nom s.a sp
 sa -> s.a
+grup.nom -> n sna sp
 S -> sadv sn
 grup.nom -> n sna sn
 S -> sadv sp
-espec -> d a s Z
 S -> conj.subord s grup.verb sa.x
 S -> relatiu grup.verb sna
 S -> conj.subord s neg grup.verb sadv
 sa -> grup.a.1n
 sn.x -> sn.x sp.j
-grup.nom -> p sp.co S
-sn.x.j -> grup.nom.co
-grup.nom.co -> grup.nom coord grup.nom.s
+espec -> d a s Z
+S -> sadv gerundi
+S -> sno grup.verb sn
 grup.verb -> v v s infinitiu
-sn.co -> sn.co sp.j
 S -> participi sn.x
-sp -> s grup.nom
 S -> sn.x S
-prep -> c
-S -> sp grup.verb sn sn
 grup.adv -> p
-grup.nom.co -> grup.nom.co s.a sp
 S -> snl grup.verb sn sp
-S -> sn grup.verb sadv sp sp.co
 S -> grup.verb sp sn
 prep -> s
+s.a -> sadv a
+S -> conj.subord sn.x grup.verb sp sn
 grup.adv -> c
 S -> conj.subord morfema.verbal grup.verb sadv sn
 grup.a -> a sp sp
 S -> sp grup.verb sn sp
-S -> sadv participi S
 S -> sno sadv grup.verb sn
 S -> conj.subord morfema.verbal grup.verb sn S
 grup.nom -> S n s.a
 S -> snp grup.verb sadv sp S
 S -> conj.subord sn neg morf.pron grup.verb
-S -> conj.subord grup.verb sp sn
+grup.nom -> n s.a
 grup.nom -> neg n
-S -> S morfema.verbal grup.verb S
+grup.nom -> S grup.nom
+sp -> sp sp sp coord sp
+S -> relatiu sno grup.verb sn
 S -> S grup.verb sadv snp sp
 S -> sn s grup.verb sn sp
-sn.co -> sn.co sn.co
 S -> sno grup.verb sn sp
 S -> conj.subord s sn grup.verb sadv
-s.a -> sadv a
+sp -> coord sp coord sp
 grup.verb -> v gerundi
 S -> conj.subord sp s grup.verb
-S -> snp grup.verb sp.co
-S -> sp s morf.pron grup.verb sp.co
+grup.a -> grup.a sadv.j
 S -> sno grup.verb sn sn
 S -> s morf.pron grup.verb
 S -> conj.subord grup.verb snp sp
 S -> conj.subord sno grup.verb sp sp
-grup.nom.co -> grup.nom.co sadv.j
-S -> S neg grup.verb S
+grup.nom -> n INC
+S -> conj.subord sn grup.verb sp S
 grup.nom -> n sp sp
 S -> grup.verb s sp
+S -> conj.subord sp morfema.verbal grup.verb sn
 S -> infinitiu sp sadv sp
-grup.nom -> n sp.co
+S -> sadv s grup.verb sp sp
 S -> neg sa
-S -> sn.co
 S -> conj.subord sp morfema.verbal grup.verb sp
 S -> conj.subord sadv s grup.verb S
-snd.co -> snn coord snd
+S -> grup.verb s sn
 grup.nom -> n sp sn
 S -> relatiu sp sn grup.verb S
-grup.a -> a sp.co
 S -> S S
 grup.nom -> n s.a INC
 grup.a -> sadv a sp
-sa.co -> S coord sa
+S -> sp sadv neg grup.verb sn
+grup.nom -> n s.a sn S
+S -> S S S S
 sn -> relatiu
 sadv -> sadv r
 espec -> s Z
-S -> S sadv.j
 grup.nom -> s.a n s.a s.a
 grup.nom -> Z sn
 S -> gerundi snl
 sp -> neg.j sp
 S -> sn sp s grup.verb sn
 grup.nom -> S n s.a S
-sp.co -> coord sp coord s.a
 S -> sp snp sn grup.verb S
 S -> sadv sp sn grup.verb sn
 S -> S grup.verb sadv snp
 S -> conj.subord sn grup.verb snp
 S -> snp.x grup.verb sadv S
-grup.nom.co -> grup.nom.co sn.j
-s.a -> a sp sp
+grup.nom -> grup.nom grup.nom grup.nom
 S -> sp s morfema.verbal grup.verb
 S -> participi sadv
 S -> conj.subord sn grup.verb sno
 S -> conj.subord sn grup.verb snn
+grup.adv -> grup.adv grup.adv
 grup.nom -> n sp snp
 S -> conj.subord sadv grup.verb sn sn
-sn -> espec grup.nom.co
 S -> conj.subord sadv grup.verb sn sp
-snd.x -> grup.nom.co
 grup.nom -> n sp snl
+grup.nom -> n sp sno
+grup.nom -> n sp snn
 grup.nom -> n sp sna
 S -> sadv neg grup.verb sn sn
-sn.co -> snl coord snl
-sn.co -> sn S coord sn
+S -> coord sn sadv grup.verb sn
 grup.verb -> v v gerundi
 S -> sn snp
-S -> sn.co neg grup.verb sp
+grup.nom -> n s.a S
 S -> conj.subord sadv neg grup.verb sn
+S -> relatiu grup.verb sp sn
 grup.nom -> Z s.a
 S -> s sn grup.verb sadv
 sno -> espec grup.nom
-S -> conj.subord snp
+sp.j -> prep sadv
+sp -> sp sp.j
+snd -> snn coord snd
 grup.nom -> n sn sp
-S -> S sn.co
 grup.nom -> s.a n S sn
 S -> s neg grup.verb S
 S -> sno grup.verb sadv
-espec -> d
 S -> sno grup.verb sadv sn sp
-S -> S INC coord S
-S -> sadv s grup.verb sp sp
+S -> neg grup.verb sn sp
+sa -> sa coord S
+sno -> sno coord sno
 S -> S sn grup.verb sp
 S -> S sn grup.verb sn
 sn -> neg.j sn
 S -> sno neg grup.verb sn
 S -> snp grup.verb snd sp S
-S -> relatiu infinitiu
+S -> grup.verb sp sp
 S -> S sn grup.verb sa
 S -> snp sn
 S -> sadv grup.verb sn
@@ -1200,108 +1136,101 @@ S -> sn grup.verb snd sp
 grup.nom -> s.a n sp sp
 grup.nom -> s.a n sp sn
 espec -> p
-S -> sn grup.verb sp.co
+sn -> sn coord sn coord sn
 S -> S sn grup.verb snp
-S -> relatiu morfema.verbal grup.verb sp
+S -> conj.subord s morfema.verbal grup.verb sp
+s.a -> s.a S coord s.a
 S -> snp sp
 grup.nom -> n sp snn S
 S -> sp grup.verb sa sn
 S -> morf.pron grup.verb sp
+S -> sn morfema.verbal grup.verb snd
 S -> sn sn grup.verb sp S
-S -> sp sn sn grup.verb sn
 S -> sn sn grup.verb sp sn
 grup.nom.s -> p S
 S -> sn grup.verb sa sadv
 sa.1n -> espec grup.a
-grup.a.co -> grup.a coord S
-sno.x -> grup.nom.co
-S -> conj.subord s neg grup.verb
-S -> conj.subord snp sn grup.verb sp
-snp.x -> espec grup.nom.co
 S -> sn sn grup.verb sp sp
+S -> sn.x grup.verb sn sp sp
 S -> morf.pron grup.verb sn
 S -> conj.subord sadv grup.verb sa S
 S -> coord snp grup.verb sp sp
 grup.nom -> n s.a sp snp
 grup.nom -> grup.nom sno.j
 S -> relatiu morfema.verbal grup.verb
-S -> relatiu S coord S
 grup.nom -> p sp S
 grup.nom -> n s.a sp sna
-sn.co -> sn sn sn coord sn
+espec -> d a d
 grup.nom -> n s.a sp sno
-S -> sn grup.verb sn sp.co
+sn -> snd coord snd
 S -> participi sn sp sp
 S -> grup.verb sadv
-S -> sp sadv grup.verb sadv sn
 sn -> S sn
-grup.a -> espec a
+S -> participi sadv sp
 S -> relatiu s grup.verb sp S
-grup.nom -> n s.a sna S
+S -> gerundi sn
 S -> gerundi sa
-sa.co -> S sa
-sn.co -> sno sno coord sn
 grup.nom -> s.a sn
+S -> sp sn grup.verb sp sn
 grup.nom -> s.a sp
-S -> relatiu grup.verb sn sp sp
+S -> sp sn grup.verb sp sp
 S -> snp grup.verb sp sn sp
 S -> gerundi sp
 S -> conj.subord sn morf.pron grup.verb S
+sn -> snn coord snn
 grup.nom -> s.a n
-sa -> espec grup.a
 S -> sn sp grup.verb sn
 S -> sadv sp sno grup.verb S
-sp -> prep sno.x
+S -> neg infinitiu S
 S -> sna grup.verb S
 grup.nom -> s.a W
 S -> sadv infinitiu sp
 grup.nom -> s.a S
 sadv -> r sadv
-S -> relatiu grup.verb S S
-grup.nom -> i
+grup.nom -> s.a Z
 S -> gerundi sn.x
-grup.nom -> sn
 snl -> snl sn.j
 sno -> sno snn.j
-S -> sno grup.verb sa sp
 S -> s grup.verb sa sn
-grup.nom -> n INC
+grup.a -> n s.a
 sp.co.j -> sp coord sp
-S -> sp sn grup.verb sp.co
+S -> relatiu grup.verb snp sp
 S -> participi INC sp
 S -> infinitiu sadv sp S
-S -> conj.subord sn.co morfema.verbal grup.verb sp
+S -> sn sn grup.verb sa S
 S -> sp snp grup.verb sn sp
 S -> relatiu neg grup.verb
 espec -> r s d n s
 sp -> prep s.a
-S -> s morf.pron grup.verb sp.co
+S -> sp s grup.verb S
+S -> s sadv grup.verb S S
 grup.nom.s -> p sn
+grup.nom -> n sp sp snp
 S -> sn.x neg grup.verb sp
 S -> sp S
 S -> s sn grup.verb sp S
-sp.co -> sp sp
-sadv -> grup.adv espec
 S -> snp grup.verb sn sp S
 sn -> espec grup.nom INC
 espec -> grup.adv
 S -> relatiu morf.pron grup.verb sn
-S -> sadv.co S
-S -> sadv grup.verb snp S
+S -> relatiu morf.pron grup.verb sa
 S -> morf.pron sn grup.verb sn
 S -> S grup.verb sadv sn
 sn.co.1n -> sn coord sn
 grup.nom -> p
-S -> neg grup.verb s S
+grup.nom -> r
+grup.nom -> grup.nom grup.nom grup.nom coord grup.nom
 grup.verb -> v
 S -> S S coord S
 S -> grup.verb sn sp sp
 S -> conj.subord sn grup.verb sa sn
 grup.nom -> a
-grup.nom -> n s.a sp sp S
 grup.nom -> d
-S -> s grup.verb sa.co
+grup.nom -> i
+S -> sn morfema.verbal grup.verb
 grup.nom -> S
+S -> relatiu s grup.verb sp sn
+grup.nom -> n sp sp sn
 grup.nom -> W
 grup.nom -> Y
 grup.nom -> Z
@@ -1309,48 +1238,46 @@ S -> participi sna
 S -> sadv sn grup.verb
 S -> participi snd
 S -> conj.subord sn neg grup.verb sn
+grup.a -> espec a
 grup.nom -> n sp sp sp
 S -> participi snp
 S -> conj.subord sn neg grup.verb sa
+grup.nom -> n sp INC
 grup.nom -> W W
 grup.nom -> grup.nom sn.j
 grup.nom -> W S
+S -> sadv.x participi
+S -> relatiu grup.verb sn sp sp
 S -> infinitiu sadv sp
-S -> s neg grup.verb sn sp
 S -> S s sn grup.verb S
 S -> relatiu grup.verb snn sp
-sn.co -> snn coord snn
+S -> relatiu grup.verb S snp
 S -> relatiu sn grup.verb sp S
 S -> s sn grup.verb sn S
-sa.x -> espec grup.a.co
 S -> S s grup.verb sp S
-S -> grup.verb sn sn S
-S -> sn grup.verb sp sn
-S -> participi sp.co
+S -> sn morf.pron sn grup.verb sp
+sa -> sa coord sa
 infinitiu -> v v v
-grup.nom -> n sn sn S
-sn.co -> grup.nom.co
+grup.nom -> grup.nom grup.nom grup.nom grup.nom grup.nom
 S -> sadv S s grup.verb S
 grup.nom -> S n s.a s.a
 S -> relatiu grup.verb snd sp
 sn -> neg sn
-S -> grup.verb s sn
 S -> sn coord S
 S -> snp sn grup.verb sadv
 sp -> s
-sn.co -> sp sn.co
 S -> sadv infinitiu sn sp
-sa.co -> sadv sa.x
 S -> snp sn sp
+sa -> sadv sa.x
 sp -> prep S
+grup.nom -> n sp sadv
 S -> sp morf.pron grup.verb sn sp
+sp -> sp coord sp coord sp
 grup.nom -> grup.nom sn.x.j
 S -> relatiu grup.verb sp sn sp
-S -> neg infinitiu S
-S -> s grup.verb sadv
 S -> sn grup.verb sp sn sp
 S -> infinitiu sn sp sp.1c
-S -> snp morf.pron grup.verb sp.co S
+S -> relatiu grup.verb S S
 snn -> sadv.j snn
 sp.j -> prep snp
 sp.j -> prep snn
@@ -1358,206 +1285,200 @@ sp.j -> prep sno
 sp.j -> prep snl
 S -> snp grup.verb sadv sn sp
 sp.j -> prep snd
-snp -> espec grup.nom
-S -> participi sadv sp
+S -> sadv grup.verb snp S
 S -> sn grup.verb sn.x sp
 sp.j -> prep sna
 S -> relatiu sp grup.verb snn
+sn -> sn snn.j
 S -> gerundi sp sn
 S -> relatiu sp grup.verb sna
+S -> coord sadv S
 S -> gerundi sp sp
 S -> sp infinitiu sn
 grup.nom -> sn n sp
-sadv -> r sp.co
-S -> sn.co grup.verb sp sp
+grup.nom -> grup.nom sp.j
 grup.nom -> n sp sp s.a
-S -> s sadv grup.verb sp
 S -> snp grup.verb sadv sp sn
-sn.co -> sn coord sn.co
 S -> snp grup.verb sadv sp sp
 grup.nom -> p sp s.a
+sn -> snn coord sn
 grup.nom -> n sp sno S
 S -> sn sn grup.verb sn sp
-S -> conj.subord morf.pron grup.verb sn
+S -> snp grup.verb sadv sno sp
 S -> snp sp sp
 S -> coord sp sn grup.verb S
 S -> sn grup.verb sn S
+S -> relatiu sadv grup.verb sp
 S -> conj.subord S s grup.verb S
 S -> relatiu sadv grup.verb sn
-espec -> d n s
-S -> relatiu grup.verb sa.co
+grup.nom -> p sp
 S -> s grup.verb sn S
 S -> snp neg grup.verb S
-grup.nom -> n snp sn
+grup.a -> neg a
 S -> relatiu sadv grup.verb sa
 S -> s neg grup.verb sadv S
 S -> snn snn snp
-grup.nom -> n sp S sp
+S -> sn.x sadv grup.verb sn
+S -> S s grup.verb
 S -> sp snp grup.verb sp
-S -> sp snp grup.verb sn
-S -> grup.verb sn.co
-S -> infinitiu sp sp
+S -> grup.verb sn sn S
 S -> sadv morfema.verbal grup.verb sn S
-sn -> grup.nom.co
-S -> sn morf.pron grup.verb sn
+grup.nom -> s.a n sp snp S
+grup.verb -> v v v
 sp.1c -> prep relatiu
 S -> conj.subord s neg sn grup.verb
 S -> infinitiu sa
 S -> coord s grup.verb S
 sadv -> r
-sadv -> p
+infinitiu -> v v
 snp -> snp snn.j snl.j sno.j
-S -> snp grup.verb sp sp sp
+S -> sn morf.pron grup.verb sp
 S -> relatiu morf.pron sn grup.verb sp
-S -> sp sn grup.verb sp sp
+S -> conj.subord morf.pron grup.verb sn
+S -> participi snd sp
 S -> sp S coord S
 S -> s morfema.verbal grup.verb sp sp
+S -> sadv sn grup.verb sp S
+grup.nom -> sn n S
+S -> s neg sn grup.verb sadv
 S -> conj.subord infinitiu
-grup.nom -> p sn
+S -> relatiu s grup.verb sadv
 S -> conj.subord sn.x grup.verb
-S -> s sn grup.verb sa.co
-S -> relatiu sadv grup.verb sp
+S -> sn grup.verb s
 S -> relatiu sadv morf.pron grup.verb sp
-S -> sadv grup.verb sn sn
 grup.nom -> s.a n s.a
 S -> sp sno grup.verb S
+S -> conj.subord morf.pron grup.verb sn sp
 grup.nom -> s.a n S S
 S -> participi sadv.x sp
 S -> relatiu neg grup.verb sn S
+sn -> snl coord snl
+S -> sn neg morfema.verbal grup.verb sp
 grup.nom.s -> n
 sp -> prep snp.x
 grup.nom.s -> p
 S -> sn grup.verb S
-S -> sn.x grup.verb sn
-S -> gerundi sn
+S -> coord snp sn grup.verb S
+snp.x -> espec grup.nom
 S -> sp snp grup.verb sp sn
+S -> sadv S S
 S -> morf.pron sn grup.verb S
 sp -> prep snd.x
 S -> relatiu snp
 espec -> d d d
-S -> sp.co
-sa.co -> sa S
 snn -> espec grup.nom sp
 S -> sp snp grup.verb sp sp
 S -> S
 S -> conj.subord grup.verb sadv snp
-sp.co -> coord sp coord sp.co
 S -> s morf.pron grup.verb sadv
-grup.nom -> n sadv S
-S -> relatiu sadv grup.verb sna
 S -> s grup.verb sn sp S
 S -> sp sn morf.pron grup.verb sp
+S -> neg grup.verb s S
 S -> conj.subord sp neg grup.verb sn
 S -> conj.subord sn S grup.verb sn
 S -> sp sn morf.pron grup.verb sa
 sp -> sadv prep sn
-S -> sn sn grup.verb sp
 grup.a -> grup.a coord S
 S -> relatiu s neg grup.verb sp
 grup.a -> sadv a
-grup.nom -> sadv s.a
 S -> conj.subord sn neg morfema.verbal grup.verb
 S -> sno grup.verb sp S
 S -> sp.j S S
 grup.nom -> n s.a s.a snp S
-neg.j -> r
 S -> sadv snp grup.verb sp
+S -> sn neg grup.verb sn.x
 INC -> snp
 INC -> snn
-S -> s grup.verb sp.co sp
 S -> sno grup.verb sn S
-grup.nom -> n sn.co
+INC -> snd
 S -> sadv snp grup.verb sn
+S -> sn grup.verb sa sp
+S -> conj.subord
+S -> sna grup.verb sp sp
 S -> sadv neg
 grup.nom -> grup.nom snd.j
+S -> relatiu sadv grup.verb sn.x
 S -> conj.subord sn neg grup.verb sadv
-S -> participi sp sp sp
-S -> coord snp sn grup.verb S
 infinitiu -> v c infinitiu
 grup.adv -> r snd
 relatiu -> p
 S -> sno grup.verb sn sadv
-grup.nom -> r
-S -> sp sn.co grup.verb sn
+sn -> sno coord sn
+S -> sp snp grup.verb sn
+sn -> grup.nom grup.nom
 S -> S grup.verb sn sp
 S -> s grup.verb sadv sadv
 S -> relatiu grup.verb sp sadv
-S -> infinitiu sp INC
+S -> s grup.verb S
 S -> sna grup.verb sn sp
-grup.nom.co -> grup.nom.co S
-S -> sna snl
+grup.nom -> p sn
 S -> coord s grup.verb sn
-grup.nom.co -> grup.nom coord sn
 S -> infinitiu snn sn
 snp -> grup.a
 S -> relatiu snd grup.verb sn
-grup.a -> n sp
 S -> s neg morf.pron grup.verb
+sn -> sn sn coord S
 S -> a sp
+S -> coord grup.verb sn sp
 S -> s grup.verb snn sp
 S -> relatiu morfema.verbal grup.verb snd
 S -> sp S s grup.verb S
-sn.co -> coord snn coord snn
+S -> infinitiu sa.x
 S -> conj.subord grup.verb snp
-S -> s grup.verb S sn
 S -> conj.subord grup.verb sno
-grup.nom -> s.a n sp snp S
 s.a -> s.a s.a s.a
 S -> s morf.pron grup.verb sp S
 grup.nom -> relatiu
 s.a -> a sp
 S -> grup.verb sadv S
 S -> sn grup.verb sadv sp sn
+S -> sn grup.verb sa sn
+S -> conj.subord sn grup.verb sadv sn.x
 s.a -> a sn
-S -> s grup.verb sn.co
 conj.subord -> c
 S -> sp s grup.verb
 S -> sadv s grup.verb sa
 S -> relatiu grup.verb sn
+S -> conj.subord neg morfema.verbal grup.verb sp
 snp.j -> grup.nom
 S -> sn neg morf.pron grup.verb sp
 S -> relatiu grup.verb sa
 S -> sadv s grup.verb sp
-S -> grup.verb sp.co
+S -> relatiu snd grup.verb sp sp
 snn.1c -> grup.nom
+sno.x -> grup.nom
 S -> sp sn grup.verb sa.x
-S -> relatiu grup.verb sp
+S -> conj.subord sadv sn grup.verb sn
 S -> coord grup.verb sa S
 S -> conj.subord s sn grup.verb sp
-S -> sno morf.pron grup.verb sp
-S -> relatiu sn.co grup.verb sp
+sadv -> p
 espec -> neg r
-S -> sn.co sn grup.verb sp
-sn.co -> snl snl coord sn
 S -> relatiu grup.verb sadv snp
 S -> relatiu neg grup.verb sa
 S -> sadv grup.verb sa S
-S -> sn morf.pron grup.verb sp
+S -> snp grup.verb sp sp sp
 S -> relatiu grup.verb sadv sna
-S -> sadv participi sadv
-S -> conj.subord sn grup.verb sa S
 S -> relatiu s neg grup.verb
 S -> sp s grup.verb sadv
+S -> relatiu grup.verb
 S -> relatiu grup.verb sadv sno
 S -> relatiu grup.verb sadv sn.x
 sn.j -> sadv.j sn
 S -> s sadv sn grup.verb S
 sn.1c -> grup.nom
 S -> sp neg grup.verb sa sn
-grup.nom -> n sp.co sp
-grup.nom -> sadv n S
+grup.nom -> n s.a snp sp
+S -> S sn grup.verb sp sp
 grup.nom -> n s.a snp sn
 S -> neg sno
-S -> s grup.verb sa sp
 S -> sp morf.pron grup.verb sn
-grup.nom.co -> grup.nom grup.nom grup.nom
-S -> sn.co sp
 numero -> Z
-grup.nom -> s.a n s.a sp S
-S -> sno grup.verb snn sp
+S -> conj.subord sn grup.verb sadv sp
+grup.nom -> sn
+S -> sno sp grup.verb sn
 S -> sadv s sadv grup.verb S
 grup.nom -> sp
-S -> coord sadv S
+espec -> r Z
 S -> conj.subord sn grup.verb sadv sn
 S -> sp sn grup.verb sa S
 S -> snp grup.verb sn sp sp
@@ -1565,72 +1486,63 @@ S -> conj.subord sno grup.verb S
 s.a -> Z
 S -> conj.subord sn grup.verb snp sp
 s.a -> a
-S -> sn morfema.verbal grup.verb sp sp
 sp -> sadv.j sadv.j sp
 S -> conj.subord sn.x grup.verb S
+espec -> d a Z
 S -> relatiu sn grup.verb S
 S -> sn grup.verb sadv sn sp
 S -> grup.verb sn sadv
-S -> relatiu sp grup.verb sn
 S -> relatiu morf.pron grup.verb sadv
-sn.co -> sadv.j sn.co
+snp.x -> grup.nom
+sn -> S S sn coord sn
 grup.nom -> S n sp S
+sn -> coord snn coord snn
 S -> s morf.pron sn grup.verb
 sno -> espec grup.a
 S -> relatiu sn grup.verb S S
 infinitiu -> v v s infinitiu
-S -> grup.verb sadv sn.co
+grup.nom -> p sp sadv
 s.a -> a sp S
-S -> S sn grup.verb sn S
-S -> sn grup.verb sn.co
+sn.x.j -> grup.nom
 S -> grup.verb sadv sn sn
 S -> infinitiu sn sn sp
-S -> relatiu INC morfema.verbal grup.verb sp
-S -> s grup.verb sp sna
-S -> sadv sn grup.verb sp S
+S -> S INC coord S
 S -> sn grup.verb sa.x
-s.a -> S s.a coord s.a
-S -> relatiu grup.verb
 S -> sn morfema.verbal grup.verb sadv
 S -> conj.subord sp grup.verb S S
-S -> conj.subord s morf.pron grup.verb S
-S -> sno grup.verb S
+S -> infinitiu sp sn
 S -> sp coord S
 S -> sp sn grup.verb sn S
 grup.nom -> s.a n S sp
-grup.nom -> s.a s.a n sp
 S -> sp s sadv grup.verb S
 grup.nom -> numero
 grup.nom -> grup.nom snp.j
-S -> conj.subord sp s grup.verb sp.co
+sn -> snp snp snp coord sn
 S -> infinitiu sn sp sp
 S -> sadv grup.verb sp sp
 S -> grup.verb sn sp S
 S -> conj.subord grup.verb S
-S -> relatiu neg grup.verb sn.co
 grup.nom -> n s.a s.a sna
-S -> sn grup.verb S S
+S -> conj.subord S S
+S -> conj.subord sp s grup.verb sn
 S -> participi sp sn
+sn -> sn sn
 S -> conj.subord sp grup.verb sn S
 grup.nom -> n snl S
 S -> conj.subord sn.x grup.verb sp
-S -> conj.subord sn grup.verb sadv
 S -> relatiu grup.verb sn sn sp
 S -> S sadv
-sadv.x.j -> grup.adv.co
-S -> participi sp sp
-S -> sp sn.co grup.verb sp
+sp.j -> prep sn.x
 S -> snp sadv grup.verb sn S
-S -> sn grup.verb sa.co
 S -> s neg grup.verb sadv
 S -> conj.subord sn sn grup.verb
 sn -> grup.nom sp
 S -> infinitiu snn
 S -> infinitiu sno
 S -> infinitiu snl
-S -> S grup.verb s sp
-S -> conj.subord S s grup.verb sp
-S -> relatiu s grup.verb sadv
+S -> sn grup.verb sadv sn S
+S -> sn sadv grup.verb S
+S -> sadv morfema.verbal grup.verb sn
 S -> infinitiu snd
 S -> S sadv grup.verb sn
 S -> infinitiu sna
@@ -1643,97 +1555,83 @@ grup.nom -> Z snn
 S -> relatiu morfema.verbal grup.verb sadv sp
 grup.nom -> n S snp
 grup.nom -> n S sno
-S -> sadv sn.co grup.verb sp
+S -> sn s sn grup.verb sp
 sadv -> sn.j sadv
 S -> S neg grup.verb sn
 S -> S INC
-S -> sn grup.verb sp
 S -> conj.subord sn sadv grup.verb sp
-S -> conj.subord sn sadv grup.verb sn
-grup.nom -> n sp snp S
+S -> sp s sadv grup.verb sp
 S -> sn grup.verb sn
 grup.nom -> d sp
 grup.nom -> s.a n s.a sp
 S -> sn sadv grup.verb sn S
-S -> sn grup.verb sa
-sn -> sp sn
+sp -> sp coord S
+grup.nom -> n sn sp snp
 grup.nom -> sadv p
 S -> conj.subord sn grup.verb sn sadv
 S -> snp neg grup.verb sn sp
 snp.1n -> espec grup.nom
 S -> conj.subord sadv morfema.verbal grup.verb sn
-S -> conj.subord grup.verb
 grup.nom -> s.a n sp S sp
 S -> relatiu grup.verb sn snd
 S -> sp sn morf.pron grup.verb S
 S -> relatiu grup.verb sn sno
 S -> conj.subord grup.verb sn sn
-S -> conj.subord sn.co
-S -> sno grup.verb sn.co
+S -> conj.subord s grup.verb sn.x
+S -> sno grup.verb sp sp sp
+grup.nom -> Z sn snn
 S -> conj.subord snp grup.verb sp sn
+sn -> snl snl coord sn
 S -> conj.subord snp grup.verb sp sp
-S -> snp grup.verb sn sadv
-sn -> sadv.j sn
+S -> s grup.verb sadv sp
 S -> conj.subord grup.verb sn sp
 S -> sn sn grup.verb s
 snp -> snp snl.j sno.j
 S -> s sadv sn grup.verb sn
-sn -> sadv.j snp
-S -> conj.subord sn grup.verb sn.co
-S -> sn grup.verb sn sn
-S -> conj.subord sadv sn grup.verb S
-grup.nom.co -> grup.nom.co s.a sp.j
+S -> S s morf.pron grup.verb sp
 S -> snd sn grup.verb sn
+S -> sadv morfema.verbal grup.verb S
 sp -> neg sp
-S -> conj.subord sn grup.verb sn sp.co
-S -> sp s grup.verb sa
-S -> relatiu neg grup.verb S
-S -> sp sno grup.verb sadv sn
+S -> sn sn grup.verb S
+S -> sno grup.verb sp sp
 sn.j -> grup.nom
 S -> sp.j S
+grup.nom -> s.a n sp sp sn
 S -> infinitiu sn S
 S -> S grup.verb sadv sn sp
 morfema.verbal -> p
 S -> infinitiu sn sadv S
 grup.nom -> n sp sn sp
-S -> sn morf.pron grup.verb S
-grup.nom -> n snl snl
+grup.nom -> s.a n sp sp sp
 S -> relatiu snp grup.verb sp sp
-S -> gerundi sn.co
+snn.j -> grup.nom
 S -> sp sadv
-sn -> sadv snn
-S -> conj.subord sn grup.verb sadv sp
-S -> conj.subord sn grup.verb sp.co
+grup.nom -> grup.nom s.a S
 S -> conj.subord grup.verb sp
 S -> sadv neg grup.verb sp
 grup.a -> a sadv
-grup.nom.co -> grup.nom.co sp.j
-S -> sn.x grup.verb sn sp sp
 grup.nom -> p sadv sp
-grup.nom.co -> grup.nom grup.nom coord grup.nom
 S -> morf.pron grup.verb sadv sp
 S -> conj.subord morfema.verbal grup.verb S
 S -> grup.verb sa S
 S -> morfema.verbal grup.verb sadv sp
 S -> sp s grup.verb sp S
-sn.co -> sn sn sn sn
 S -> S sn
+grup.nom -> sadv n s.a sp
 S -> sadv morfema.verbal grup.verb sn sp
 S -> sadv s grup.verb sp sn
 S -> S sp
-sn.co -> snp coord sno
 S -> conj.subord snp grup.verb sn sp
 sadv -> sadv r sp
-S -> conj.subord
+S -> sa sn sp
 S -> infinitiu sadv sn
-S -> sn.co grup.verb sn
 grup.nom -> W snd
 S -> sp sna grup.verb sn sp
-S -> sn.co grup.verb sp
 S -> s grup.verb sadv sn sp
 S -> sadv infinitiu sn
 grup.nom -> n sna
 grup.nom -> p s.a
+S -> sp sn neg grup.verb S
 grup.nom -> n snd
 S -> sp grup.verb S sn
 grup.nom -> n sno
@@ -1744,46 +1642,49 @@ grup.nom -> n snp
 S -> relatiu sn grup.verb sadv sp
 s.a -> s.a s.a sp
 S -> conj.subord sno grup.verb sna
-sn.co -> coord sn coord sn
 S -> infinitiu sp sn sn
 S -> sp morfema.verbal grup.verb sn S
-S -> relatiu snp grup.verb sp
 grup.nom -> n s.a sp snp S
 S -> conj.subord morfema.verbal grup.verb sp sp
-grup.nom -> p sp
+sadv -> grup.adv espec
+sa.x -> espec grup.a
 grup.nom -> Z n sn.x
-S -> sadv morfema.verbal grup.verb S
 S -> snp sadv grup.verb sadv sp
 S -> infinitiu sp sn sp
 S -> sp snp grup.verb sn S
-S -> sno grup.verb sadv sp sp
 S -> grup.verb sn S
 morf.pron -> p
-grup.verb -> v v v
+grup.nom -> n sn sn S
 S -> snl sp
 sa -> a sp sp
 S -> relatiu morfema.verbal grup.verb sp S
 S -> infinitiu sna sp
+S -> conj.subord s grup.verb sn sadv
 snl -> espec grup.nom
 S -> s morf.pron grup.verb sn sp
-grup.nom -> n s.a sn S
+S -> sno grup.verb sadv sp sn
+snp -> espec grup.nom
+S -> snp grup.verb sn sadv
 S -> sn neg grup.verb sn sp
-S -> conj.subord s grup.verb sn sp
 S -> conj.subord sn grup.verb S S
+sn -> sno sno coord sno
+grup.nom -> grup.nom coord grup.nom
 s.a -> grup.a
 S -> relatiu grup.verb sp S
+grup.nom -> S n
 grup.nom -> S S
-grup.nom -> S W
+sn -> snp coord sno
 S -> infinitiu sadv S
+S -> sn.x grup.verb sn
 S -> sn sadv grup.verb sn sp
 grup.nom -> sadv.j grup.nom
 S -> relatiu sn grup.verb snp
-grup.nom -> s.a snp
 S -> relatiu grup.verb sna sp
 grup.nom -> n sp sp sp S
 S -> sn.x grup.verb sp
 S -> snd sp
-S -> gerundi sp.co
+neg.j -> r
+sn -> snp coord snp
 sn -> snn sn.j
 grup.a -> n
 S -> sn neg grup.verb sn S
@@ -1791,92 +1692,89 @@ S -> sp sn S
 grup.nom -> n s.a s.a
 S -> S sn.x.j
 grup.a -> a
-S -> sn grup.verb sa sn
+grup.nom -> grup.nom coord sn
 grup.a -> p
 grup.nom -> sadv n snp
 S -> sadv sadv grup.verb sn
 infinitiu -> v s infinitiu
-sp.co -> sp coord S
-grup.a -> Z
 S -> conj.subord sp S coord S
-sadv.x -> grup.adv.co
+grup.nom -> n sp sp S
 S -> grup.verb sp S
 S -> snp morf.pron grup.verb sadv sp
 S -> sp snp morf.pron grup.verb sp
 S -> conj.subord sn.x grup.verb sn
-sn.co -> sna coord sna
 S -> sp S S
-grup.nom -> n s.a snp sp
+S -> sno grup.verb snn sp
+sadv -> sp coord sadv
 S -> conj.subord sno grup.verb
-sa.x -> grup.a.co
 S -> relatiu morfema.verbal sn grup.verb
 grup.nom -> Z S
 S -> S sp S
 S -> S grup.verb snp sp
 grup.nom -> a sp
 grup.nom -> Z sna
+sn -> sn coord sadv
 grup.nom -> Z snn snp
 S -> sp sn grup.verb sn sp
 s.a -> s.a S
-S -> coord sn grup.verb sp
 gerundi -> v s infinitiu
 S -> conj.subord neg S
-S -> sn grup.verb S sn
 S -> sadv sn morf.pron grup.verb sp
-grup.nom -> s.a Z
 S -> sn grup.verb sn sp sp
 S -> conj.subord S grup.verb sa S
-sn.co -> sp.j sn.co
-S -> s grup.verb sadv sp.co
-grup.nom -> n sp s.a sp.co
+S -> sp snp grup.verb sadv sn
+S -> conj.subord morfema.verbal grup.verb sn
 grup.nom -> n sadv sp sp
 S -> relatiu sn morf.pron grup.verb sp
 grup.nom -> s.a grup.nom
 S -> conj.subord morfema.verbal grup.verb sp sn
+S -> sadv sp sn grup.verb sp
 sn.j -> espec grup.nom
-grup.nom -> n sp sp S
 S -> conj.subord S sn grup.verb S
 S -> sp s grup.verb sadv sn
 S -> sadv sn morf.pron grup.verb
 S -> gerundi sp sn sp
 S -> sp s grup.verb sadv sp
+S -> infinitiu sa sadv
 s.a -> sp coord s.a
 grup.nom -> n sadv sp
 S -> relatiu grup.verb sadv sn sp
 S -> sp grup.verb snp
 S -> relatiu grup.verb S
 sa -> a
-S -> s grup.verb S S
 S -> sp grup.verb snl
 grup.nom -> n s.a sn sn
-S -> sn.x grup.verb sadv sp sn
+sadv.x -> grup.adv
+S -> conj.subord sna grup.verb sn
 S -> neg grup.verb sa S
 sadv -> r S
 s.a -> S s.a
 grup.nom -> p S
-S -> sp sn grup.verb sa sp
 S -> sn.x grup.verb sadv sp S
+S -> S sadv s grup.verb S
+S -> relatiu sno grup.verb sp sp
 sadv -> neg grup.adv
-sp.co -> sp sp sp coord sp
+S -> sn grup.verb sa
+S -> sadv snp grup.verb sp sn
+S -> sp snl grup.verb sn
 S -> conj.subord s grup.verb snn
 S -> conj.subord sn sadv grup.verb
 S -> conj.subord s grup.verb sna
-S -> sp sn grup.verb sn
+S -> sna grup.verb sn
+grup.nom -> n snp sn
 grup.nom -> s.a n sp sn.x
 S -> sp sp grup.verb sn
 S -> s sadv neg grup.verb sn
 S -> conj.subord s grup.verb snp
 S -> relatiu s neg grup.verb sn
 S -> sn INC grup.verb S
-sp.co -> coord sp coord sp
 S -> sn S grup.verb sa
-grup.nom.co -> grup.nom coord grup.nom coord grup.nom
 S -> relatiu grup.verb sno sp
-sn.co -> sn sn
 grup.nom -> s.a n sp s.a
 grup.verb -> gerundi
-S -> S grup.verb snp
+S -> relatiu S coord S
 S -> infinitiu sn sp S
+S -> sadv sn grup.verb sn sp
 S -> conj.subord sn morf.pron grup.verb sadv
 S -> relatiu morfema.verbal grup.verb sadv
 S -> conj.subord sadv s grup.verb
@@ -1887,80 +1785,72 @@ S -> s sn grup.verb S
 S -> conj.subord sn grup.verb sa.x
 s.a -> S coord s.a
 S -> relatiu sadv sn grup.verb
+grup.nom -> grup.nom grup.nom grup.nom grup.nom
 S -> conj.subord snp grup.verb S
 S -> relatiu sp grup.verb sp
 snn -> espec grup.nom
-S -> sadv.x participi
-sn.co -> sn coord sp
+grup.a -> grup.a S
 S -> snp grup.verb sp
 grup.nom -> n snp snp S
 grup.nom -> n sn.x S
 S -> infinitiu sadv sadv
-S -> sadv gerundi
-S -> s grup.verb sp.co
-S -> snp grup.verb sn
 S -> s grup.verb sp sn
 S -> snp grup.verb sa
-S -> sn neg grup.verb sn.x
+S -> grup.verb S S
 S -> sp s sn grup.verb sp
-S -> sn sadv grup.verb sn.co
 S -> conj.subord snl grup.verb sn
 S -> conj.subord sna grup.verb sp
-grup.nom -> s.a n sp sp sp
 S -> relatiu sadv morfema.verbal grup.verb sn
 S -> sp s grup.verb S sn
+S -> conj.subord snl grup.verb sp
 S -> sadv snp grup.verb sp sp
 S -> sadv participi
 S -> sadv participi sp sp
-S -> relatiu morf.pron grup.verb sa
-S -> S grup.verb sn.co
-S -> snn sp
 S -> s grup.verb sp sp sp
-S -> conj.subord s grup.verb sn.x
-S -> sn grup.verb sp sn.co
-S -> sp grup.verb sp
+S -> sn sn grup.verb S sn
+sp -> sp
+S -> sp s grup.verb sn
+S -> s grup.verb S S
 S -> conj.subord s grup.verb S S
+S -> sp s grup.verb sa
 grup.nom -> sadv p S
 S -> relatiu s neg grup.verb sadv
-S -> s grup.verb sn.co sp
 S -> morfema.verbal grup.verb S
 S -> sp s grup.verb sp
 S -> sp grup.verb sn
-S -> participi sp
+prep -> c
+S -> sadv grup.verb S
+S -> neg participi sp
+S -> conj.subord grup.verb sa S S
 sa -> a S
 S -> coord sn grup.verb sa
-S -> sno grup.verb sn
+S -> sp sadv grup.verb sadv sn
 S -> conj.subord sn morfema.verbal grup.verb sn
 S -> participi sn
-S -> S sadv s grup.verb S
 S -> coord sn grup.verb sn
-INC -> snd
-grup.adv -> r
-S -> sp grup.verb sn.co
+snn -> grup.nom
 S -> sn grup.verb sp sp sp
 S -> conj.subord sn grup.verb S
-S -> conj.subord grup.verb sn.x
 S -> sn grup.verb sadv sadv sp
 grup.nom -> Z sp S
 S -> sn grup.verb sp sp sn
 S -> sadv sn morfema.verbal grup.verb sp
 S -> sp grup.verb sadv sn
 S -> relatiu grup.verb snd sn
+S -> conj.subord sadv grup.verb sn
 S -> conj.subord sno morf.pron grup.verb sp
-S -> s sadv grup.verb S S
-S -> sp s grup.verb sn.co
 sn -> prep sn
 sp -> sadv.j sp
-S -> morfema.verbal grup.verb sp sp
-grup.nom.co -> grup.nom grup.nom grup.nom coord grup.nom
+sn -> sn.x coord sn
+sp -> prep sadv
+S -> coord grup.verb S
+S -> sp morfema.verbal grup.verb sp sp
 grup.nom -> n sp snd sp
+S -> relatiu sn grup.verb sa sp
 S -> conj.subord s grup.verb sa sp
 snp -> snp sno.j
 S -> snp sn grup.verb sn sp
 S -> S conj.subord S
-S -> infinitiu sp sn
-s.a -> sadv a sp
-sa.co -> sadv sa.co
 grup.adv -> a
 S -> sp neg grup.verb sn
 S -> sp sp
@@ -1970,22 +1860,20 @@ S -> participi sp sn sp
 S -> conj.subord s grup.verb sn sn
 espec -> d coord d
 grup.nom -> neg n sp
-S -> relatiu grup.verb sp sp sp
-S -> S s morf.pron grup.verb sp
-S -> conj.subord sadv
+S -> sadv sn sp
 S -> sn.x grup.verb S sp
 S -> grup.verb s sp S
+S -> conj.subord s grup.verb sno
 S -> sp neg grup.verb sn sp
-S -> sna grup.verb sp sp.co
+S -> sadv participi S
 S -> sn morf.pron grup.verb sp sp
-S -> relatiu sadv grup.verb sn.x
 S -> relatiu sn
 S -> relatiu morf.pron sn grup.verb sadv
-sadv.co -> sp sadv
+S -> conj.subord morfema.verbal grup.verb sn sp
 S -> conj.subord sadv sp
 grup.nom -> n sp sp INC
-sadv -> r sn
 S -> conj.subord sna grup.verb sn sp
+S -> participi sp sp sp
 S -> coord sp grup.verb sn
 grup.nom -> s.a n s.a sn
 S -> sp sadv grup.verb sn
@@ -1996,40 +1884,36 @@ S -> gerundi
 S -> infinitiu sp
 grup.a -> a sp
 sp.1c -> prep sn
-S -> s sadv grup.verb sp S
 S -> relatiu s morf.pron grup.verb sp
 S -> sna morfema.verbal grup.verb sp
-S -> sadv grup.verb sn.co
-S -> sadv grup.verb sn sp
-S -> neg morfema.verbal grup.verb sn
-S -> sn neg grup.verb sn
+S -> conj.subord sadv
 S -> sp s grup.verb sn S
 grup.nom -> s.a s.a sp
 grup.nom -> s.a W S
 S -> grup.verb sadv sn
-S -> S grup.verb sp
 S -> sadv sn neg grup.verb sn
 snl -> grup.nom.1n
 espec -> d n s d
 S -> sn grup.verb
 grup.nom -> n snn S
-grup.nom.co -> grup.nom.co s.a S
+S -> sp grup.verb sn sn
 infinitiu -> v gerundi
 S -> infinitiu S sp
+sn -> espec sn
 S -> relatiu grup.verb sa S
-grup.nom.co -> n
+S -> relatiu s sadv neg grup.verb
 S -> conj.subord neg grup.verb
 sn -> espec sp
-sn.co -> sn.co s.a
-S -> S grup.verb snp S
-sn.co -> snl coord sn
+snn -> snn snn.j
+sn -> S coord sn
 S -> S sn morf.pron grup.verb sp
 grup.nom -> p sp sn
 S -> s grup.verb sn sp
 grup.adv -> sadv r
 S -> conj.subord sp grup.verb sn sp
+grup.verb -> v sadv c infinitiu
 grup.verb -> v infinitiu
-grup.a -> a sp sp.co
+sp -> sp sp sp
 S -> s grup.verb sp sp S
 S -> snp sp grup.verb sp S
 grup.nom -> s.a n sp
@@ -2038,108 +1922,104 @@ sn -> sn sp
 S -> S grup.verb sa S
 sn -> sp.j.1c sn
 S -> sadv snp morf.pron grup.verb S
-sp.co -> sp.co coord sp
-grup.nom.co -> grup.nom grup.nom grup.nom grup.nom
 grup.adv -> r S
 grup.nom -> n sadv
 grup.nom -> s.a n sn
 grup.verb -> v sp infinitiu
-sn.co -> sn coord sn
-S -> s grup.verb sp sn.co
 grup.nom -> Z sadv
-S -> sn.co grup.verb sadv sn
+grup.nom -> s.a grup.nom S
+S -> s grup.verb sa S
 grup.nom -> grup.nom snn.j
 grup.a -> s.a
+S -> sadv sadv grup.verb sa S
+sn -> sn sn sn
 S -> snn S
-S -> sn.co grup.verb sadv sp
 grup.nom -> grup.nom snl.j
-S -> sa.co
-grup.nom -> n S sn.co
-grup.nom.co -> sadv grup.nom.co
 grup.nom -> sadv s.a sp sn
 S -> relatiu grup.verb sn sp
 grup.verb -> infinitiu
-S -> relatiu grup.verb sn sn
+S -> infinitiu sp INC
+S -> relatiu grup.verb sn sa
 S -> infinitiu sno sp
 s.a -> sadv sadv a
 sn -> grup.a
 sn -> sadv.j snn
 S -> conj.subord s sn grup.verb sn
 sa -> a sadv sp
+sn -> sadv.j snd
 sn -> sadv.j sna
 S -> coord sn
+sn -> sna coord sn
 S -> coord sp
 S -> sn morfema.verbal grup.verb sadv S
-sadv.co -> sadv coord sp
-snn -> snn snn.j
+S -> S grup.verb s sp
 snl -> grup.nom
-grup.a -> grup.a sadv.j
+sadv -> r sn
 S -> conj.subord sp S
 s.a -> s.a sp
-S -> sn sn grup.verb sadv
-grup.a -> neg a
+S -> s neg grup.verb sn sp
+S -> sadv s morf.pron grup.verb
 S -> relatiu grup.verb sp sp
 S -> conj.subord s grup.verb sadv S
 S -> relatiu sn sn grup.verb sp
+S -> infinitiu sn sadv
 S -> sadv S sn grup.verb sp
-grup.nom.co -> grup.nom grup.nom
-sp.co -> sp coord sp
+s.a -> S s.a coord s.a
+sno.j -> grup.nom
+grup.nom -> n S sn.x
+S -> morfema.verbal grup.verb sp sp
+S -> morf.pron grup.verb sn S
+S -> relatiu sp grup.verb sn
 sp.j -> sadv.j sp
+S -> S neg grup.verb S
+sp -> sp coord sp
 S -> relatiu s grup.verb S
 grup.nom -> n s.a sp sn
-grup.nom.s -> p s.a
 S -> snp grup.verb S sp
 sp -> s.a sp
+S -> snp sadv morf.pron grup.verb sp
+grup.a -> grup.a sp.j
 S -> sp S grup.verb sn
 S -> sa S
 S -> grup.verb sa sn
-snn -> snn snn.j snp.j
 S -> sp grup.verb sn sn sp
-S -> grup.verb sp
 sp -> prep sn coord sn
 S -> sp morf.pron sn grup.verb sn
+grup.nom -> n sp S sp
 S -> sp sn neg grup.verb sn
 S -> grup.verb S
 sadv.j.1c -> grup.adv
-grup.nom.co -> grup.nom.co sp sp
 S -> relatiu sno grup.verb S
 S -> conj.subord morfema.verbal grup.verb
 S -> S INC S
 S -> sn grup.verb s sp
-S -> s neg grup.verb sn.co
 S -> relatiu sadv morfema.verbal grup.verb
 S -> sp s morf.pron grup.verb
-espec -> d a d
 grup.nom -> n sp S
 grup.nom -> grup.nom
-grup.nom -> S n
 S -> grup.verb s
-S -> sno grup.verb sadv sp sn
 S -> s sadv grup.verb sn.x
 grup.nom -> n snp sp
-s.a -> S coord S
+S -> s neg grup.verb sp sp
+S -> s neg grup.verb sa S
 S -> sn grup.verb sp sp
 S -> snp sadv grup.verb sn
-S -> coord sn grup.verb S
+S -> sn grup.verb sp sn
 S -> sadv infinitiu sp sp
 espec -> Z
-S -> conj.subord sp morfema.verbal grup.verb sn
 S -> sp sn morfema.verbal grup.verb sp
-snn -> sn sp.j
-S -> infinitiu sp sp.co
-sn.co -> sn.x coord sn
+grup.a -> Z
+sn -> coord sn coord sn
+espec -> d
 grup.nom -> S n sp
 espec -> n
-S -> grup.verb sp sp
+S -> relatiu infinitiu
 espec -> s
-espec -> r
-grup.nom -> neg.j grup.nom
 grup.nom -> S n sn
 S -> conj.subord sn sn grup.verb sn
 S -> s grup.verb sna
 S -> sp sn grup.verb S sp
 S -> neg grup.verb sp
-sa.co -> sa sa
 S -> conj.subord S grup.verb sn
 S -> conj.subord S grup.verb sa
 S -> sadv sn grup.verb sp sn
@@ -2152,195 +2032,180 @@ snn.j -> grup.nom.p
 grup.nom -> s.a n s.a sn.x
 S -> neg grup.verb sn
 S -> conj.subord s grup.verb sadv sn
-S -> sn.co grup.verb sp S
 S -> sn sp grup.verb S
 S -> s grup.verb sp sp
-grup.nom -> n S sp.co
 S -> conj.subord s sn grup.verb S
-espec -> r s d
+grup.nom -> S W
+S -> s grup.verb sn sp sn
 S -> s grup.verb sn sp sp
+S -> conj.subord sno grup.verb sadv sn
 espec -> d r d
-grup.nom.co -> grup.nom.p coord grup.nom.p
-S -> relatiu grup.verb S snp
 S -> conj.subord sadv sn grup.verb sp
 S -> conj.subord s grup.verb sadv sp
-S -> neg grup.verb
-sadv.j -> r
+sn -> sadv sn
 snl -> snl snl.j
-sp.co -> sp.co sp
+S -> conj.subord sn grup.verb sadv
 grup.nom -> s.a n sp sn sp
-sadv -> sadv S
-S -> conj.subord sn.co grup.verb sn sp
-sno.j -> grup.nom
-S -> infinitiu sa.co sp
-S -> S S S S
+S -> sno grup.verb S
+S -> participi sp
 S -> relatiu coord S coord S
-S -> conj.subord s grup.verb sno
+grup.nom -> grup.nom coord grup.nom coord grup.nom
 S -> sn sadv sn grup.verb sp
-infinitiu -> v
 grup.nom -> p s.a S
 S -> s neg sn grup.verb sa
 snn.j -> espec grup.nom
+S -> sp sn sn grup.verb sn
 S -> s neg sn grup.verb sp
 S -> sn s sn grup.verb S
 S -> sp sn sn grup.verb sp
-S -> conj.subord sn grup.verb sp.co sp
-snp -> snp snl.j
+S -> s grup.verb sp sna
 grup.nom -> sadv n snp S
-S -> conj.subord s grup.verb sn sadv
-sn -> grup.nom grup.nom
-S -> sno sp grup.verb sn
-S -> sadv s morf.pron grup.verb sp
+S -> coord sn grup.verb sp
+grup.a -> n sp
+sn -> espec grup.a
 S -> infinitiu sadv
 S -> sadv.j.1c morfema.verbal grup.verb sa sn.co.1n
-S -> s grup.verb sn sp.co
 grup.nom -> p sadv
 S -> sn.x
 S -> grup.verb sa sp
-S -> infinitiu sp sn.co
 S -> sp morfema.verbal grup.verb sadv sn
-snn.j -> grup.nom
-S -> grup.verb S S
 S -> sp sno grup.verb snn
 grup.nom -> Z s.a snn
 S -> sadv sno grup.verb sn
-S -> snp neg grup.verb sp
-grup.nom.co -> coord grup.nom coord grup.nom
-sp -> prep sno.co
+S -> sadv participi sadv
 grup.nom -> n sp
 S -> s sadv grup.verb sadv sp
 S -> infinitiu sp sadv
-snp.co -> snp coord snp
 grup.nom -> n sn
-grup.adv.co -> grup.adv coord grup.adv
 S -> relatiu sadv grup.verb S
+S -> relatiu INC morfema.verbal grup.verb sp
 grup.nom -> n sp sn S
 S -> sno sn.x
 S -> conj.subord neg morfema.verbal grup.verb sn
 S -> conj.subord sn neg sn grup.verb
 S -> S sn.x
-grup.nom -> n sp snn
 S -> sn sn grup.verb sadv sp
-grup.adv.co -> grup.adv grup.adv
+S -> S sadv.j
 S -> S sn.j
-S -> conj.subord neg morfema.verbal grup.verb sp
+snp -> snp snl.j
 grup.nom -> n s.a s.a snp
 S -> conj.subord grup.verb sn
 S -> neg grup.verb sadv sn
-S -> S grup.verb S
-S -> s grup.verb sadv sp
-sn.co -> snp snp snp coord sn
 sadv -> grup.adv
 S -> sn grup.verb snd
-S -> relatiu grup.verb snp sp
-S -> s grup.verb sadv sn
+S -> relatiu neg grup.verb S
+S -> sn grup.verb sna
 S -> sn grup.verb snn
 S -> sn grup.verb sno
 S -> sn grup.verb snl
-grup.nom.co -> grup.nom grup.nom grup.nom grup.nom grup.nom
+snp -> snp coord snp
 S -> sp morfema.verbal grup.verb sp sn
-S -> relatiu sna grup.verb sp
+S -> sp sn grup.verb S S
+S -> s grup.verb snn
 S -> sp s sn grup.verb sn
 grup.nom -> n s.a s.a sno
-S -> conj.subord morfema.verbal grup.verb sadv sp
-S -> conj.subord s grup.verb sp sn
 S -> relatiu sp morf.pron grup.verb sp
-s.a -> sadv a sp sp
+grup.nom -> sadv s.a
 espec -> n s
 S -> relatiu infinitiu sn
-grup.adv -> grup.adv S
-S -> conj.subord sp.1c s grup.verb sn
-sp.co -> sp.co S
+sa -> sa.x sp
 gerundi -> v v
+S -> sn grup.verb S S
 sno -> sno sn.x.j
+grup.verb -> v v sadv v
 S -> s morfema.verbal grup.verb sp
 S -> relatiu sp sadv grup.verb sn
 S -> relatiu infinitiu sp
-S -> sn.x sadv grup.verb sn
 sn -> v Z n
+S -> sn grup.verb S sn
 S -> S coord S
 S -> conj.subord s grup.verb sn S
 S -> relatiu neg sn grup.verb
 grup.nom -> n s.a INC sp
-snl.j -> grup.nom
+snn -> sn sp.j
 S -> sn grup.verb S sp
 snp -> grup.nom
 S -> sno S
 grup.nom -> sadv n sp
-S -> relatiu sn grup.verb sp sn
+S -> sp sn grup.verb sn sn
 S -> coord sn grup.verb sadv S
+grup.adv -> r
+S -> sn grup.verb sadv sp sp
 S -> S snp grup.verb sp S
 S -> sp sn grup.verb sn.x
+grup.nom -> n sadv S
 sp -> sadv.x.j sp
 S -> morf.pron grup.verb S
 S -> sn morf.pron grup.verb sp sn
-sa.co -> sa.co sp
+sp -> s grup.nom
 grup.verb -> v v c infinitiu
 S -> sna
-S -> conj.subord sadv grup.verb sn
-S -> sp snp grup.verb sadv sn
 snp -> sn.j snp snn.j
 S -> sp sn grup.verb sp S
+grup.adv -> grup.adv S
 S -> conj.subord sno grup.verb sn sp
 S -> morfema.verbal grup.verb sn sp
-S -> S s sn grup.verb
 S -> sn sp morf.pron grup.verb sp
 S -> sn sadv grup.verb sadv sn
+sadv -> sadv coord sp
 S -> grup.verb snp
+S -> neg morfema.verbal grup.verb sn
 S -> grup.verb snn
+S -> neg morfema.verbal grup.verb sp
 S -> participi S
 S -> sno grup.verb sadv sp S
 S -> infinitiu sn
-S -> sadv s morf.pron grup.verb
+sn -> snp snp snp snp snp
 S -> coord snp grup.verb S
+S -> sp sadv morfema.verbal grup.verb sp
 S -> sn S S
+snn -> snn snn.j snp.j
 S -> relatiu s grup.verb sn sp
 sadv -> r sp
+S -> grup.verb sp
 S -> conj.subord sno neg grup.verb sn
 S -> grup.verb sp sadv
 S -> sn.x grup.verb sn sp
-S -> sp.co snp grup.verb sn
 S -> conj.subord sno neg grup.verb sp
-S -> infinitiu sn.co
+sa -> sadv a
 grup.nom -> S sn.x
-sn.co -> snl snl coord snl
+S -> sn sn grup.verb sadv
 S -> grup.verb sa
 S -> participi sp snd sp
 S -> sadv participi sp
-sa.co -> sa sa coord sa
 S -> sp morf.pron grup.verb sp sn
 S -> conj.subord snp grup.verb sp S
-sp.j -> prep sn.x
+s.a -> a sp sp
 S -> snn sno
 S -> coord grup.verb sn sn
+S -> snn snp
 S -> snp morf.pron grup.verb sa sp
-S -> sn neg grup.verb sp sp
+sn -> sn s.a
+grup.nom -> a s.a
 S -> conj.subord sn.x
-S -> s neg grup.verb sa S
 sadv -> r s.a
 S -> S sp morfema.verbal grup.verb sn
 S -> relatiu sp grup.verb sp sadv
 S -> conj.subord sp sn grup.verb sp
 grup.nom -> n s.a sp s.a
-S -> sn.co sn grup.verb S
 S -> S grup.verb sp sn
+sa -> S coord sa
 S -> conj.subord s sn grup.verb
 S -> S S S S S
-sa.co -> sa.x sp
+espec -> r
 S -> conj.subord sn grup.verb sna
-S -> sn sn grup.verb S sn
 grup.a -> a s.a
 S -> relatiu grup.verb sadv
-S -> sp s grup.verb sn
 S -> sadv s grup.verb sn
+S -> sp grup.verb sp
 S -> sadv sn grup.verb sadv
 grup.nom.p -> n
-sa.co -> sp coord sa
-S -> sno grup.verb sp sp
 grup.nom -> s.a n sp sp S
 S -> S grup.verb sadv sno
-S -> sn sadv grup.verb S
-S -> neg participi sp
+grup.nom.s -> p s.a
+grup.nom -> n snl snl
 S -> interjeccio sna
-grup.adv -> sn r sp
+sp -> sp sp coord sp
+S -> neg infinitiu sn sp
 S -> conj.subord sn grup.verb sp sna
+grup.adv -> sn r sp

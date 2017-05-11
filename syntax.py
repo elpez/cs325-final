@@ -21,7 +21,6 @@ class Transform(object):
             return tree
         ret = [''] * len(self.change)
         children = map(get_label, tree)
-        print 'children: ' + str(children)
         if children == self.match:
             for child in tree:
                 try:

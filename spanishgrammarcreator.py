@@ -58,6 +58,8 @@ def normalize_clause(tag):
 		newTag = newTag.partition('.ms')[0]
 	if '.mp' in newTag:
 		newTag = newTag.partition('.mp')[0]
+	if newTag[-3:] == '.co':
+		newTag = newTag[:-3]
 	return newTag
 
 MakeSpanishGrammar(cess_esp.fileids()) #the grammar is very long. be careful.
