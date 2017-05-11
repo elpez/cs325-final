@@ -118,10 +118,9 @@ def tagged_text_to_str(tagged_text):
 def normalize_tag(tag):
     """Normalize a single tag from the cess_esp tagset. This just chops off the semantic annotation.
     """
-    #newTag = tag.partition('00')[0]
-    newTag = tag[0:2] #this removes everything except the basic POS + one extra piece of information
+    newTag = tag[0] #this removes everything except the basic POS
     if newTag[0] == "F":
-        newTag = ""
+        newTag = "" #removes punctuation
     return newTag
 
 def percentage_correct(my_tags, correct_tags):
