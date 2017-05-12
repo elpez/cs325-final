@@ -42,13 +42,14 @@ class Tagger(object):
 
     def tag_most_likely(self, text):
         """Add the most likely part-of-speech tags to the text based solely on POS frequency."""
-        return [(word, normalize_tag(self.tag_word(word))) for word in text]
+        #return [(word, normalize_tag(self.tag_word(word))) for word in text]
+        return [(word, self.tag_word(word)) for word in text]
 
     def tag_word(self, word):
         """Return the most likely POS tag for a word. If the word is not present in the tagger's 
            corpus, 'UNK' is returned.
         """
-        return self.known_tags.get(word, 'UNK')
+        return self.known_tags.get(word.lower(), 'UNK')
 
     @staticmethod
     def compare_texts(text1, text2):
@@ -127,5 +128,14 @@ def percentage_correct(my_tags, correct_tags):
     return 100*(1 - (Tagger.compare_texts(my_tags, correct_tags) / len(correct_tags)))
 
 # load the taggers from file
-brown_tagger = Tagger.load('brown.tag')
-cess_tagger = Tagger.load('cess.tag')
+try:
+    brown_tagger = Tagger.load('brown.tag')
+except IOError:
+    brown_tagger = Tagger(brown.tagged_words())
+    brown_tagger.save('brown.tag')
+
+try:
+    cess_tagger = Tagger.load('cess.tag')
+except IOError:
+    cess_tagger = Tagger(cess_esp.tagged_words())
+    cess_tagger.save('cess.tag')

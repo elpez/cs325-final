@@ -11,7 +11,6 @@ class LexicalTransfer:
 
 	def transfer(self, sent):
 		sentence = ""
-		print sent
 		for child in sent:
 			if not isinstance(child, Tree): #if it's a tuple of (word, tag)
 				word = child[0].lower()
