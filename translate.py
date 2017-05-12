@@ -3,7 +3,7 @@
 ['I have a dog']
 """
 from tbl import Tagger
-from lexicon import lexical_transfer
+from lexicon import LexicalTransfer
 from syntax import syntactic_transfer
 from cfg import CFGrammar, Tree
 
@@ -13,12 +13,16 @@ def translate(sentence):
     tags = tagger.tag(sentence)
     #print "Tags: " + str(tags)
     trees = g.parse(tags)
+    lexical_transfer = LexicalTransfer()
     if trees:
         #print 'Tree: ' + str(trees)
         transferred = [syntactic_transfer(tree) for tree in trees]
         #print 'Transferred: ' + str(transferred)
-        return [lexical_transfer(tree) for tree in transferred]
+        return [lexical_transfer.transfer(tree) for tree in transferred]
     else:
-        return [lexical_transfer(Tree('-', tags))]
+        transferred = syntactic_transfer(tags)
+        return [lexical_transfer.transfer(transferred)]
 
-print str(translate('Yo tener un perro rojo .'))
+print translate('Yo tengo un perro rojo')
+print translate('Tienes un perro amarillo')
+print translate('Ella ama el perro grande')

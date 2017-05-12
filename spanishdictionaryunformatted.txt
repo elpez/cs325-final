@@ -1513,7 +1513,7 @@ than	que	conjunction
 thank  ; give thanks	agradecer	verb
 thank you very much	muchas gracias	conversation
 that	aquel	pronoun
-the	el	article
+the	el ; la	article
 theater  ; theatre  ; house	teatro	city
 their	su	pronoun
 them	los	pronoun

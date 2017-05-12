@@ -46,12 +46,27 @@ def get_label(tree_or_leaf):
         return tree_or_leaf[1]
 
 # adjectives come after nouns
-transforms = [Transform(['n', 'a'], ['a', 'n'])]
+transforms = [(['n', 'a'], ['a', 'n']), (['grup.verb','grup.nom'],['grup.nom','grup.verb'])]
 
 def syntactic_transfer(tree):
-    newTree = tree
-    for transform in transforms:
-        newTree = transform(newTree)
+    if isinstance(tree, Tree):
+        newTree = tree
+        for trans in transforms:
+	    transform = Transform(trans[0],trans[1])
+            newTree = transform(newTree)
+    else: #list of tuples
+        prevWord = ('','')
+        newTree = []
+        for word in tree:
+            transformed_word = False
+            for transform in transforms:
+                if prevWord[1] == transform[0][0] and word[1] == transform[0][1] and not transformed_word:
+                    toAdd = [word,prevWord]
+                    transformed_word = True
+                elif not transformed_word:
+                    toAdd = [prevWord]
+            newTree += toAdd
+            prevWord = word
     return newTree
 
 if __name__ == '__main__':

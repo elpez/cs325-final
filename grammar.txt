@@ -1,4 +1,4 @@
-S -> grup.nom grup.verb
+S -> grup.nom grup.verb | grup.verb
 
 # noun phrases
 grup.nom -> d grup.nom | p | n | n | n a
